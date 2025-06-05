@@ -1,0 +1,174 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<h1>Other data sources</h1>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Travel data sources
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          API (Advanced Passenger Information)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          BITD (Border and Immigration Transactional Data)
+        </label>
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Details to display in results
+      </h2>
+    </legend>
+    
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <a href="#" role="button" id="selectAll" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          IMS (Allegations management system)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          OCGM (Immigration and border force intelligence)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          IMSR (IMS Referrals)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          ILRD (Overseas RALON data set)        
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+          SIP (Single intelligence platform)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          S24 (Suspicious marriage reports)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Legacy data sources
+      </h2>
+    </legend>
+    
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <a href="#" role="button" id="selectAllLegacy" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          A8 (Accession 8)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          ASYS (Asylum Support System)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          COH (Companies House)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+         GLOBE (GLOBE Work Permit Management System)        
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+          HSMP (Highly Skilled Migrants Programme)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          HPBS (Highly skilled migrants programme - points-based system)
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          NOD (National Operations Data)
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          PBS (Points based system)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          SAW (Seasonal agricultural workers permits)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-button-group">
+  <a href="new-request.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</a>
+<a href="first-time-user.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Save and return to homepage
+</a>
+  
+</div>
+
+{% endblock %}

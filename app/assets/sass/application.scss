@@ -1,0 +1,30 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+
+.hods-ucdm-page, #story-root, #root, body, html {
+    background-color: #f5f5f5 !important;
+    color: #0b0c0c;
+    font-family: "Roboto", "Arial", sans-serif;
+    margin: 0;
+}
+
+
+.condition {
+    border: 1px solid #b1b4b6;
+    background-color: #f3f2f1;
+    /* background-color: #ffffff; */
+    padding: 30px;
+    position: relative;
+
+    fieldset {
+        border: 0;
+    }
+}
+
+.flex {
+    display: flex;
+}

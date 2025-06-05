@@ -1,0 +1,201 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your settings</h1>
+
+      <h2 class="govuk-heading-m">Type of search</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type of search"
+            },
+            value: {
+              text: "Person"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type of search"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Match threshold"
+            },
+            value: {
+              text: "Medium"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "match threshold"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Details to display in results</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Details to display in results"
+            },
+            value: {
+              html: "Contact details,<br>Immigration"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "details to display in results"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Highlight terms in text"
+            },
+            value: {
+              html: "Highlight text 1,<br>Highlight text 2,<br>Highlight text 3"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "highlight terms in text"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Data sources</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Default data sources"
+            },
+            value: {
+              html: "CID (Case Information Database),<br>PCDP (Person Centric Data Platform)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "default data sources"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Other data sources</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Travel data sources"
+            },
+            value: {
+              html: "API (Advanced Passenger Information),<br>BITD (Border and Immigration Transactional Data)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "other data sources"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Intelligence data sources"
+            },
+            value: {
+              html: "OCGM (Immigration and border force intelligence),<br>SIP (Single intelligence platform),<br>S24 (Suspicious marriage reports)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "intelligence data sources"
+                }
+              ]
+            }
+          },{
+            key: {
+              text: "Legacy data sources"
+            },
+            value: {
+              html: "ASYS (Asylum Support System),<br>PBS (Points based system),<br>SAW (Seasonal agricultural workers permits)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "legacy data sources"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Save your settings</h2>
+
+      <p class="govuk-body">By saving your settings you can save time when submitting future search requests. This can be accessed on the homepage.</p>
+
+      <a href="settings.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save settings
+</a>
+
+    </div>
+  </div>
+{% endblock %}

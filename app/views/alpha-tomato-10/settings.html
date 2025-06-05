@@ -1,0 +1,279 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+{% block content %}
+
+<h1>Settings</h1>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+   Type of search
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="person" selected>Person</option>
+    <option value="address">Address</option>
+    <option value="phone">Phone</option>
+    <option value="email">Email</option>
+    <option value="organisation">Organisation</option>
+    <option value="document">Document</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+   Match confidence
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="very-low" selected>Very low</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+    <option value="very-high">Very high</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Details to display in results
+      </h2>
+    </legend>
+    
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <a href="#" role="button" id="selectAll" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Associations
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Contact details
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Immigration case history
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Intelligence data sources
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+          Location
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          Return non matches
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+          Highlight terms in text
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Mobile phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+        </div> -->
+        
+       
+       
+       
+       
+        <div id="conditions-container">
+          <div class="condition">
+            <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label" for="event-name">
+                  Terms to highlight
+                  <span class="govuk-caption-m">Submit a large volume of data to search over multiple data sources simultaneously</span>
+                </label>
+              </h3>
+              <div class="flex">
+                <input class="govuk-input govuk-!-margin-right-5" id="event-name" name="eventName" type="text" >
+                <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- end of condition-container -->
+
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<h2 class="govuk-heading">
+  Data sources
+</h2>
+
+<h3 class="govuk-heading">
+  Default data sources
+</h3>
+<p class="govuk-body">The default data sources are BRP, CID, CRS, DNB, GBD, IABS, WPD and PCDP.</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend">
+      
+       Do you want to customise the default data sources?
+      
+    </legend>
+    <!-- <div id="contact-hint" class="govuk-hint">
+      Select one option
+    </div> -->
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <!-- <label class="govuk-label" for="contact-by-email">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email"> -->
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <a href="#" role="button" id="selectAllData" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="brp" name="data-sources" type="checkbox" value="associations">
+        <label class="govuk-label govuk-checkboxes__label" for="brp">
+          BRP (Biometric Residence Permit)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="cid" name="data-sources" type="checkbox" value="contact-details">
+        <label class="govuk-label govuk-checkboxes__label" for="cid">
+          CID (Case Information Database)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="crs" name="data-sources" type="checkbox" value="immigration">
+        <label class="govuk-label govuk-checkboxes__label" for="crs">
+          CRS (Central Reference System)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="dnb" name="data-sources" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="dnb">
+          DNB (Dun and Bradstreet)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="gbd" name="data-sources" type="checkbox" value="location">
+        <label class="govuk-label govuk-checkboxes__label" for="gbd">
+          GBD (GB  Data)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="iabs" name="data-sources" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="iabs">
+          IABS (Immigration and Asylum Biometric System)
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="pcdp" name="data-sources" type="checkbox" value="location">
+        <label class="govuk-label govuk-checkboxes__label" for="pcdp">
+          PCDP (Person Centric Data Platform)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="wpd" name="data-sources" type="checkbox" value="intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="wpd">
+          WPD (Worldpay)
+        </label>
+      </div>
+
+        </div>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+
+<h3 class="govuk-heading">
+  Other data sources
+</h3>
+<p class="govuk-body">Other data sources are available:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>intelligence (such as IMS, SIP and OCGM)</li>
+  <li>legacy (such as ASYS, GLOBE and NOD)</li>
+  <li>travel (API and BITD)</li>
+</ul>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Do you want to use any other data sources?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources" name="otherDataSources" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources-2" name="otherDataSources" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources-2">
+          Yes
+        </label>
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+<a href="other-data-sources.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</a>
+{% endblock %}
