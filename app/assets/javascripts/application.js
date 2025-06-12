@@ -32,7 +32,7 @@ $('#addTerms').click(function(e) {
 
     $.each(array,function(i){
         // alert(array[i]);
-        $('.tags').append('<a href="#" class="close-button">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tags').append('<a href="#" style="color:white" class="close-button">' + array[i] + '<span class="close-icon"> X</span> </a>');
         $('#termsToHighlightHidden').val($('#termsToHighlight').val());
     });
 
