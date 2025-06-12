@@ -46,11 +46,11 @@
 }
 
 #conditions-container {
-    .govuk-link--no-visited-state:visited {
+    .close-button:visited {
         color: white;
     }
 
-    .govuk-link--no-visited-state:focus {
+    .close-button:focus {
         color: black;
         border: 3px solid black;
         box-shadow: none;
