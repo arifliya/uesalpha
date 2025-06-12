@@ -13,7 +13,7 @@
 <!-- Add your page content here -->
 
 <h1>Other data sources</h1>
-
+<form class="form" action="first-time-user" method="post">
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -23,13 +23,13 @@
     </legend>
     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <input class="govuk-checkboxes__input" id="organisation" name="travel-data-sources" type="checkbox" value=" API (Advanced Passenger Information)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation">
           API (Advanced Passenger Information)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="travel-data-sources" type="checkbox" value=" BITD (Border and Immigration Transactional Data)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
           BITD (Border and Immigration Transactional Data)
         </label>
@@ -43,7 +43,7 @@
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading">
-        Details to display in results
+        Intelligence data sources
       </h2>
     </legend>
     
@@ -52,37 +52,37 @@
   Select all
 </a>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="intel-data" type="checkbox" value="IMS (Allegations management system)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation">
           IMS (Allegations management system)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="intel-data" type="checkbox" value="OCGM (Immigration and border force intelligence)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
           OCGM (Immigration and border force intelligence)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="intel-data" type="checkbox" value="IMSR (IMS Referrals)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
           IMSR (IMS Referrals)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="intel-data" type="checkbox" value="ILRD (Overseas RALON data set)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
           ILRD (Overseas RALON data set)        
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="intel-data" type="checkbox" value="SIP (Single intelligence platform)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
           SIP (Single intelligence platform)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="intel-data" type="checkbox" value="S24 (Suspicious marriage reports)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
           S24 (Suspicious marriage reports)
         </label>
@@ -104,56 +104,56 @@
   Select all
 </a>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="legacy-data" type="checkbox" value=" A8 (Accession 8)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation">
           A8 (Accession 8)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="legacy-data" type="checkbox" value=" ASYS (Asylum Support System)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
           ASYS (Asylum Support System)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="legacy-data" type="checkbox" value=" COH (Companies House)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
           COH (Companies House)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="legacy-data" type="checkbox" value=" GLOBE (GLOBE Work Permit Management System)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
          GLOBE (GLOBE Work Permit Management System)        
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="legacy-data" type="checkbox" value=" HSMP (Highly Skilled Migrants Programme)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
           HSMP (Highly Skilled Migrants Programme)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="legacy-data" type="checkbox" value=" HPBS (Highly skilled migrants programme - points-based system)">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
           HPBS (Highly skilled migrants programme - points-based system)
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-7" name="legacy-data" type="checkbox" value=" NOD (National Operations Data)">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-7">
           NOD (National Operations Data)
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-8" name="legacy-data" type="checkbox" value="PBS (Points based system)">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-8">
           PBS (Points based system)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-9" name="legacy-data" type="checkbox" value="SAW (Seasonal agricultural workers permits)">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-9">
           SAW (Seasonal agricultural workers permits)
         </label>
       </div>
@@ -162,13 +162,12 @@
 </div>
 
 <div class="govuk-button-group">
-  <a href="new-request.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  <button role="button" draggable="false" class="govuk-button" data-module="govuk-button">
   Save and continue
-</a>
-<a href="first-time-user.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Save and return to homepage
-</a>
+</button>
   
 </div>
+
+</form>
 
 {% endblock %}

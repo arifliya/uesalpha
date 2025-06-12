@@ -20,3 +20,32 @@ $('#selectAll').click(function(event) {
     checked=!checked;
     event.preventDefault();
 });
+
+
+$('#addTerms').click(function(e) {
+    // var bla = $("#termsToHighlight").val();
+    
+
+    var array = $('#termsToHighlight').val().split(",");
+
+    // var array2 = $('#termsToHighlight');
+
+    $.each(array,function(i){
+        // alert(array[i]);
+        $('.tags').append('<a href="#" class="close-button govuk-link govuk-link--no-visited-state">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('#termsToHighlightHidden').val($('#termsToHighlight').val());
+    });
+
+    
+
+    $('#termsToHighlight').val("");
+    // $('.tag').append(' <b>' + array + '</b>');
+    e.preventDefault();
+
+    $('.close-button').click(function(event) {
+        // alert(this);
+        $(this).hide();
+        event.preventDefault();
+    });
+});
+

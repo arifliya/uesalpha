@@ -19,12 +19,14 @@
 
 <h1>Settings</h1>
 
+<form class="form" action="other-data-sources" method="post">
+
 <div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+  <label class="govuk-label" for="type">
    Type of search
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="person" selected>Person</option>
+  <select class="govuk-select" id="type" name="type">
+    <option value="person" >Person</option>
     <option value="address">Address</option>
     <option value="phone">Phone</option>
     <option value="email">Email</option>
@@ -34,22 +36,22 @@
 </div>
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+  <label class="govuk-label" for="match">
    Match confidence
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="very-low" selected>Very low</option>
-    <option value="low">Low</option>
-    <option value="medium">Medium</option>
-    <option value="high">High</option>
-    <option value="very-high">Very high</option>
+  <select class="govuk-select" id="match" name="match">
+    <option value="Very low" >Very low</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+    <option value="Very high">Very high</option>
   </select>
 </div>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h2 class="govuk-fieldset__heading">
+      <h2 id="detailsToDisplayInResults" class="govuk-fieldset__heading">
         Details to display in results
       </h2>
     </legend>
@@ -59,44 +61,44 @@
   Select all
 </a>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="associations">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation" name="organisation" type="checkbox" value="Associations">
         <label class="govuk-label govuk-checkboxes__label" for="organisation">
           Associations
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="contact-details">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-2" name="organisation" type="checkbox" value="Contact details">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
           Contact details
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="immigration">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-3" name="organisation" type="checkbox" value="Immigration case history">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
           Immigration case history
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-4" name="organisation" type="checkbox" value="Intelligence data sources">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
           Intelligence data sources
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="location">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-5" name="organisation" type="checkbox" value="Location">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
           Location
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input details-to-display-checkboxes" id="organisation-6" name="organisation" type="checkbox" value="Return non matches">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
           Return non matches
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
-        <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+        <input class="govuk-checkboxes__input" id="highlightTerms" name="highlight-term" type="checkbox" value="Highlight terms in text" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-checkboxes__label" for="highlightTerms">
           Highlight terms in text
         </label>
       </div>
@@ -118,14 +120,16 @@
               <h3 class="govuk-label-wrapper">
                 <label class="govuk-label" for="event-name">
                   Terms to highlight
-                  <span class="govuk-caption-m">Submit a large volume of data to search over multiple data sources simultaneously</span>
+                  <span class="govuk-caption-m">Separate multiple terms with commas</span>
                 </label>
               </h3>
               <div class="flex">
-                <input class="govuk-input govuk-!-margin-right-5" id="event-name" name="eventName" type="text" >
-                <button data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+                <input class="govuk-input govuk-input--width-20 govuk-!-margin-right-5" id="termsToHighlight" name="termsToHighlight" type="text" >
+                <a href="#" id="addTerms" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</a>
               </div>
             </div>
+            <span class="tags"></span>
+            <input class="govuk-visually-hidden" id="termsToHighlightHidden" name="termsToHighlightHidden" type="text" >
           </div>
         </div> 
         <!-- end of condition-container -->
@@ -184,49 +188,49 @@
   Select all
 </a>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="brp" name="data-sources" type="checkbox" value="associations">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="brp" name="data-sources" type="checkbox" value=" BRP (Biometric Residence Permit)">
         <label class="govuk-label govuk-checkboxes__label" for="brp">
           BRP (Biometric Residence Permit)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="cid" name="data-sources" type="checkbox" value="contact-details">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="cid" name="data-sources" type="checkbox" value=" CID (Case Information Database)">
         <label class="govuk-label govuk-checkboxes__label" for="cid">
           CID (Case Information Database)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="crs" name="data-sources" type="checkbox" value="immigration">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="crs" name="data-sources" type="checkbox" value=" CRS (Central Reference System)">
         <label class="govuk-label govuk-checkboxes__label" for="crs">
           CRS (Central Reference System)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="dnb" name="data-sources" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="dnb" name="data-sources" type="checkbox" value=" DNB (Dun and Bradstreet)">
         <label class="govuk-label govuk-checkboxes__label" for="dnb">
           DNB (Dun and Bradstreet)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="gbd" name="data-sources" type="checkbox" value="location">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="gbd" name="data-sources" type="checkbox" value=" GBD (GB  Data)">
         <label class="govuk-label govuk-checkboxes__label" for="gbd">
           GBD (GB  Data)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="iabs" name="data-sources" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="iabs" name="data-sources" type="checkbox" value=" IABS (Immigration and Asylum Biometric System)">
         <label class="govuk-label govuk-checkboxes__label" for="iabs">
           IABS (Immigration and Asylum Biometric System)
         </label>
       </div>
        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="pcdp" name="data-sources" type="checkbox" value="location">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="pcdp" name="data-sources" type="checkbox" value=" PCDP (Person Centric Data Platform)">
         <label class="govuk-label govuk-checkboxes__label" for="pcdp">
           PCDP (Person Centric Data Platform)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input data-sources-checkboxes" id="wpd" name="data-sources" type="checkbox" value="intelligence">
+        <input class="govuk-checkboxes__input data-sources-checkboxes" id="wpd" name="data-sources" type="checkbox" value=" WPD (Worldpay)">
         <label class="govuk-label govuk-checkboxes__label" for="wpd">
           WPD (Worldpay)
         </label>
@@ -257,13 +261,13 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="otherDataSources" name="otherDataSources" type="radio" value="england">
+        <input class="govuk-radios__input" id="otherDataSources" name="otherDataSources" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="otherDataSources">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="otherDataSources-2" name="otherDataSources" type="radio" value="scotland">
+        <input class="govuk-radios__input" id="otherDataSources-2" name="otherDataSources" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="otherDataSources-2">
           Yes
         </label>
@@ -273,7 +277,17 @@
   </fieldset>
 </div>
 
-<a href="other-data-sources.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+
+
+
+
+<!-- <a href="other-data-sources.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
   Save and continue
-</a>
+</a> -->
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
 {% endblock %}

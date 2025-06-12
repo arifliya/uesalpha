@@ -28,3 +28,35 @@
 .flex {
     display: flex;
 }
+
+.close-button {
+    border: 1px solid #0C2D4A;
+    border-radius: .3125em;
+    padding: 5px 10px;
+    text-decoration: none;
+    // display: flex
+;
+    align-items: center;
+    color: white;
+    background-color: #1d70b8;
+    font-family: "GDS Transport", arial, sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#conditions-container {
+    .govuk-link--no-visited-state:visited {
+        color: white;
+    }
+
+    .govuk-link--no-visited-state:focus {
+        color: black;
+        border: 3px solid black;
+        box-shadow: none;
+    }
+}
+
+.close-icon {
+    margin-left: 10px;
+}
