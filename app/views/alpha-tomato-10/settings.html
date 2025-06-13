@@ -19,9 +19,9 @@
 
 <h1>Settings</h1>
 
-<form class="form" action="other-data-sources" method="post">
+<form class="form" action="/data-source-answer" method="post">
 
-<div class="govuk-form-group">
+<div id="typeOfSearch" class="govuk-form-group">
   <label class="govuk-label" for="type">
    Type of search
   </label>
@@ -35,7 +35,7 @@
   </select>
 </div>
 
-<div class="govuk-form-group">
+<div id="matchConfidence" class="govuk-form-group">
   <label class="govuk-label" for="match">
    Match confidence
   </label>
@@ -140,7 +140,7 @@
   </fieldset>
 </div>
 
-<h2 class="govuk-heading">
+<h2 id="dataSources" class="govuk-heading">
   Data sources
 </h2>
 
@@ -184,7 +184,7 @@
         <div class="govuk-form-group">
           
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <a href="#" role="button" id="selectAllData" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      <a href="#" role="button" id="selectAllDefault" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Select all
 </a>
       <div class="govuk-checkboxes__item">
@@ -261,13 +261,13 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="otherDataSources" name="otherDataSources" type="radio" value="no">
+        <input class="govuk-radios__input" id="otherDataSources" name="other" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="otherDataSources">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="otherDataSources-2" name="otherDataSources" type="radio" value="yes">
+        <input class="govuk-radios__input" id="otherDataSources-2" name="other" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="otherDataSources-2">
           Yes
         </label>

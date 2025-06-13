@@ -1,0 +1,30 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<h1>Universal Enrichment Service (UES)
+  <span class="govuk-caption-l">Submit a large volume of data to search over multiple data sources simultaneously</span>
+</h1>
+
+<h2>Your search history</h2>
+
+<p class="govuk-body govuk-!-padding-bottom-9">You have no search history.</p>
+
+<div class="govuk-button-group">
+  <a href="new-request.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  New request
+</a>
+
+  
+</div>
+{% endblock %}
