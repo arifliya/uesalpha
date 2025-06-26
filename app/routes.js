@@ -14,7 +14,7 @@ router.post('/data-source-answer', function(request, response) {
     if (otherDataSources == "yes"){
         response.redirect("alpha-tomato-10/other-data-sources")
     } else {
-        response.redirect("alpha-tomato-10/homepage")
+        response.redirect("alpha-tomato-10/check-settings-all-users")
     }
 })
 
