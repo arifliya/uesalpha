@@ -89,4 +89,3 @@ $('#addTerms').click(function(e) {
     
 
 });
-

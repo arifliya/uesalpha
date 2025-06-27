@@ -26,12 +26,13 @@
    Type of search
   </label>
   <select class="govuk-select" id="type" name="type">
-    <option value="person" >Person</option>
-    <option value="address">Address</option>
-    <option value="phone">Phone</option>
-    <option value="email">Email</option>
-    <option value="organisation">Organisation</option>
-    <option value="document">Document</option>
+    <!-- <option value="{{ data['type'] }}">{{ data['type'] }}</option> -->
+    <option value="Person">Person</option>
+    <option value="Address">Address</option>
+    <option value="Phone">Phone</option>
+    <option value="Email">Email</option>
+    <option value="Organisation">Organisation</option>
+    <option value="Document">Document</option>
   </select>
 </div>
 
@@ -40,6 +41,7 @@
    Match confidence
   </label>
   <select class="govuk-select" id="match" name="match">
+    <!-- <option value="{{ data['match'] }}" >{{ data['match'] }}</option> -->
     <option value="Very low" >Very low</option>
     <option value="Low">Low</option>
     <option value="Medium">Medium</option>
