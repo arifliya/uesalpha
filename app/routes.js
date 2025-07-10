@@ -12,9 +12,9 @@ router.post('/data-source-answer', function(request, response) {
 
     var otherDataSources = request.session.data['other']
     if (otherDataSources == "yes"){
-        response.redirect("alpha-tomato-10/other-data-sources")
+        response.redirect("alpha-tomato-10b/other-data-sources")
     } else {
-        response.redirect("alpha-tomato-10/check-settings-all-users")
+        response.redirect("alpha-tomato-10b/check-settings-all-users")
     }
 })
 

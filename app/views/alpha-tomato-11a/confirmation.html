@@ -1,0 +1,41 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Submission complete
+          </h1>
+          <!-- <div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+             We have sent you a confirmation email.
+          </div> -->
+        </div>
+        <p class="govuk-body">We have sent you a confirmation email.</p>
+        
+        <p class="govuk-body">Check the UES homepage for updates to this submission.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<a href="homepage.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Go to homepage
+</a>
+
+{% endblock %}
