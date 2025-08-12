@@ -94,7 +94,7 @@ $('#addTerms').click(function(e) {
 $('#breadCrumb-ID-2').click(function() {    
     
    if (window.location.href.indexOf("#people") > -1) {
-    alert("found people");
+    // alert("found people");
     // $('#breadCrumb-ID').text('People');
     $(this).attr('href', 'upload-template.html#people');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
@@ -102,7 +102,7 @@ $('#breadCrumb-ID-2').click(function() {
 }
 
 if (window.location.href.indexOf("#contact") > -1) {
-    alert("found contact");
+    // alert("found contact");
     // $('#breadCrumb-ID').text('Contact numbers');
     $(this).attr('href', 'upload-template.html#contact');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
@@ -113,7 +113,7 @@ if (window.location.href.indexOf("#contact") > -1) {
 $('#breadCrumb-ID-3').click(function() {    
     
    if (window.location.href.indexOf("#people") > -1) {
-    alert("found people");
+    // alert("found people");
     // $('#breadCrumb-ID').text('People');
     $(this).attr('href', 'what-do-you-want-displayed.html#people');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
@@ -121,7 +121,7 @@ $('#breadCrumb-ID-3').click(function() {
 }
 
 if (window.location.href.indexOf("#contact") > -1) {
-    alert("found contact");
+    // alert("found contact");
     // $('#breadCrumb-ID').text('Contact numbers');
     $(this).attr('href', 'what-do-you-want-displayed.html#contact');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
