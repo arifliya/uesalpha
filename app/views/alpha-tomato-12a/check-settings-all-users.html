@@ -1,0 +1,147 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your settings</h1>
+
+      <h2 class="govuk-heading-m">Type of search</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type of search
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['type'] }} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden">Person</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Match threshold
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['match'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden">Match threshold</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Details to display in results</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Details to display in results
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <!-- Contact details,<br>Immigration -->
+          {{ data['organisation'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="settings.html#detailsToDisplayInResults">Change<span class="govuk-visually-hidden"> Details to display in results</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Highlight terms in text
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['termsToHighlightHidden'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="settings.html#highlightTerms">Change<span class="govuk-visually-hidden"> Highlight terms in text</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Data sources</h2>
+
+     
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Default data sources
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['data-sources'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="settings.html#dataSources">Change<span class="govuk-visually-hidden">Default data sources</span></a>
+          </dd>
+        </div>
+        
+      </dl>
+
+      <h2 class="govuk-heading-m">Other data sources</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Travel data sources
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travel-data-sources'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="other-data-sources.html">Change<span class="govuk-visually-hidden">Travel data sources</span></a>
+          </dd>
+        </div>
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Intelligence data sources
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['intel-data'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="other-data-sources.html#intelligenceDataSources">Change<span class="govuk-visually-hidden">Intelligence data sources</span></a>
+          </dd>
+        </div>
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Legacy data sources
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['legacy-data'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="other-data-sources.html#legacyDataSources">Change<span class="govuk-visually-hidden">Legacy data sources</span></a>
+          </dd>
+        </div>  
+      </dl>
+
+      <h2 class="govuk-heading-m">Save your settings</h2>
+
+      <p class="govuk-body">By saving your settings you can save time when submitting future search requests. This can be accessed on the homepage.</p>
+
+      <a href="first-time-user.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</a>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-2" class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Display in results
+    </li>
+  </ol>
+</nav>
+
+<h1>What do you want displayed in the results?</h1>
+<form id="formId2" class="form" action="check-settings-all-users-submit" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <a href="#" role="button" id="selectAllIntel" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation" name="displayed-in-results" type="checkbox" value="Travel">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Travel
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-2" name="displayed-in-results" type="checkbox" value=" Contact details">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Contact details
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-3" name="displayed-in-results" type="checkbox" value=" Intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Intelligence
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-4" name="displayed-in-results" type="checkbox" value=" Immigration">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Immigration       
+        </label>
+      </div>
+       <!-- <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-5" name="displayed-in-results" type="checkbox" value=" Match scoring">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+          Match scoring
+        </label>
+      </div> -->
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-6" name="displayed-in-results" type="checkbox" value=" Person details">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          Person details
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-inset-text">
+   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="default" name="default" type="checkbox" value="Save as default settings">
+        <label class="govuk-label govuk-checkboxes__label" for="default">
+          Save as default settings
+        </label>
+      </div>
+    </div>
+</div>
+
+<div class="govuk-button-group">
+  <button role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+  Save and continue
+</button>
+  
+</div>
+
+</form>
+
+{% endblock %}

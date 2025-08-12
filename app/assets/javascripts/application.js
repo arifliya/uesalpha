@@ -89,3 +89,60 @@ $('#addTerms').click(function(e) {
     
 
 });
+
+
+$('#breadCrumb-ID-2').click(function() {    
+    
+   if (window.location.href.indexOf("#people") > -1) {
+    alert("found people");
+    // $('#breadCrumb-ID').text('People');
+    $(this).attr('href', 'upload-template.html#people');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    // $('#typeOfSearch').text('People');
+}
+
+if (window.location.href.indexOf("#contact") > -1) {
+    alert("found contact");
+    // $('#breadCrumb-ID').text('Contact numbers');
+    $(this).attr('href', 'upload-template.html#contact');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    // $('#typeOfSearch').text('Contact');
+}
+});
+
+$('#breadCrumb-ID-3').click(function() {    
+    
+   if (window.location.href.indexOf("#people") > -1) {
+    alert("found people");
+    // $('#breadCrumb-ID').text('People');
+    $(this).attr('href', 'what-do-you-want-displayed.html#people');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    // $('#typeOfSearch').text('People');
+}
+
+if (window.location.href.indexOf("#contact") > -1) {
+    alert("found contact");
+    // $('#breadCrumb-ID').text('Contact numbers');
+    $(this).attr('href', 'what-do-you-want-displayed.html#contact');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    // $('#typeOfSearch').text('Contact');
+}
+});
+
+
+
+if (window.location.href.indexOf("#people") > -1) {
+    // alert("found people");
+    $('#breadCrumb-ID').text('People');
+    $('#formId').attr('action', 'what-do-you-want-displayed#people');
+    $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    $('#typeOfSearch').text('People');
+}
+
+if (window.location.href.indexOf("#contact") > -1) {
+    // alert("found contact");
+    $('#breadCrumb-ID').text('Contact numbers');
+    $('#formId').attr('action', 'what-do-you-want-displayed#contact');
+    $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    $('#typeOfSearch').text('Contact');
+}

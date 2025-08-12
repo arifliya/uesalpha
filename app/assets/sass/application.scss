@@ -60,3 +60,35 @@
 .close-icon {
     margin-left: 10px;
 }
+
+.display-panel {
+    background-color: #fff;
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    margin-bottom: 30px;
+}
+
+.display-panel:after {
+    display: block;
+    background-color: #732282;
+    content: "";
+    width: auto;
+    height: 3px;
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+// a::before {
+//   content: "🔗";
+// }
+
+// .display-panel h3::before {
+//   content: url("/shared-assets/images/examples/firefox-logo.svg");
+//   display: inline-block;
+//   width: 15px;
+//   height: 15px;
+//   margin-right: 5px;
+// }
+
