@@ -144,5 +144,39 @@ if (window.location.href.indexOf("#contact") > -1) {
     $('#breadCrumb-ID').text('Contact numbers');
     $('#formId').attr('action', 'what-do-you-want-displayed#contact');
     $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
-    $('#typeOfSearch').text('Contact');
+    $('#typeOfSearch').text('Contact numbers');
 }
+
+
+// setTimeout(
+//   function() 
+//   {
+//     //do something special
+  
+
+// $(document).ready(function(){
+//     $('#inProgressBanner').removeClass('govuk-visually-hidden');
+// });
+
+// }, 5000);
+
+
+// $(function() {
+    
+//     setTimeout(function() {
+        
+//     }, 5000);
+// });
+
+
+$(function() {
+    $('#inProgressBanner').removeClass('govuk-visually-hidden');
+    setTimeout(function() {
+        $('#inProgressBanner').addClass('govuk-visually-hidden');
+        $('#inProgressTag').text('Completed');
+        $('#inProgressTag').removeClass('govuk-tag--blue');
+        $('#inProgressTag').addClass('govuk-tag--green');
+        $('#completedBanner').show();
+        $('#changeViewDetailsURL').attr('href', 'details-completed.html');
+    }, 10000);
+});

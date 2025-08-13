@@ -21,6 +21,7 @@
       <!-- <span class="govuk-caption-l">Submit a large volume of data to search over multiple data sources simultaneously</span> -->
     </h1>
     <br>
+    <p>{{ data['fileUpload1'] }} results is ready to download</p>
   <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
     Download file
   </a>
@@ -40,7 +41,8 @@
           File name
         </dt>
         <dd class="govuk-summary-list__value">
-          Template file name 2.xls
+          <!-- Template file name 2.xls -->
+           {{ data['fileUpload1'] }}
         </dd>
       </div>
 

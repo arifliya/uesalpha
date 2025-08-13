@@ -11,6 +11,21 @@
 
 {% block content %}
 <!-- Add your page content here -->
+<div id="inProgressBanner" class="hods-alert govuk-visually-hidden">
+  <h2 class="hods-alert__heading">New search request sent</h2>
+  <p>
+   Search request for <strong>{{ data['fileUpload1'] }}</strong> is being processed.
+  </p>
+</div>
+
+<div id="completedBanner" class="hods-alert hods-alert--success">
+  <h2 class="hods-alert__heading">
+    Search completed
+  </h2>
+  <p>
+    <strong><a class="govuk-link govuk-link--no-visited-state" href="details-completed.html">{{ data['fileUpload1'] }} results</a> is ready to download.</strong>
+  </p>
+</div>
 
 
 <div class="govuk-grid-row">
@@ -39,14 +54,14 @@
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">{{ data['fileUpload1'] }}</th>
       <td class="govuk-table__cell">14:59 30 Apr 2025</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-      <td class="govuk-table__cell"><a href="details-in-progress.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
+      <td class="govuk-table__cell"><strong id="inProgressTag" class="govuk-tag govuk-tag--blue">In progress</strong></td>
+      <td class="govuk-table__cell"><a id="changeViewDetailsURL" href="details-in-progress.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Template file name 2.xls</th>
       <td class="govuk-table__cell">11:19 29 Apr 2025</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
-      <td class="govuk-table__cell"><a href="details-in-completed.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
+      <td class="govuk-table__cell"><a href="details-completed.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
     </tr>
    
     <tr class="govuk-table__row">
