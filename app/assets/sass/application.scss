@@ -15,7 +15,7 @@
 
 .condition {
     border: 1px solid #b1b4b6;
-    background-color: #f3f2f1;
+    background-color: #ffffff;
     /* background-color: #ffffff; */
     padding: 30px;
     position: relative;
@@ -35,13 +35,14 @@
     padding: 5px 10px;
     text-decoration: none;
     // display: flex
-;
+    display: inline-block;
     align-items: center;
     color: white !important;
     background-color: #1d70b8;
     font-family: "GDS Transport", arial, sans-serif;
     font-size: 16px;
     margin-right: 10px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
@@ -94,4 +95,48 @@
 
 #completedBanner {
     display: none;
+}
+
+.autocomplete__wrapper * {
+  @include govuk-typography-common();
+}
+
+#addDataSources {
+    margin-left: 10px;
+}
+
+#addContactDetails {
+    @extend #addDataSources;
+}
+
+#addWhereaboutsDetails {
+    @extend #addDataSources;
+}
+
+#addImmigrationDetails {
+    @extend #addDataSources;
+}
+
+#addTravelDetails {
+    @extend #addDataSources;
+}
+
+#removeAllDataSources {
+    float: right;
+}
+
+#removeAllContactDetails {
+    @extend #removeAllDataSources
+}
+
+#removeAllWhereaboutsDetails {
+    @extend #removeAllDataSources
+}
+
+#removeAllImmigrationDetails {
+    @extend #removeAllDataSources
+}
+
+#removeAllTravelDetails {
+    @extend #removeAllDataSources
 }

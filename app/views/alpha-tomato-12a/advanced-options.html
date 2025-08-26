@@ -1,0 +1,134 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script src="/public/javascripts/application-autocomplete.js"></script>
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/accessible-autocomplete.min.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-2" class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-3" class="govuk-breadcrumbs__link" href="what-do-you-want-displayed.html">Display in results</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Advanced options
+    </li>
+  </ol>
+</nav>
+
+<h1>Advanced options</h1>
+
+
+<form id="formId3" class="form" action="check-settings-all-users-submit" method="post">
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="match-settings">
+    Match confidence settings
+  </label>
+  <select class="govuk-select" id="match-settings" name="match-settings">
+    <option value="Fuzzy">Fuzzy</option>
+    <option value="Recommended" selected>Recommended</option>
+    <option value="Strict">Strict</option>
+  </select>
+</div>
+
+<div class="condition">
+        <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+ 
+            <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label" for="event-name">
+                  Information sources
+                  <span class="govuk-caption-m">Search and add data sources</span>
+                </label>
+              </h3>
+              <div class="flex">
+                <!-- <input class="govuk-input govuk-input--width-20 govuk-!-margin-right-5" id="termsToHighlight" name="termsToHighlight" type="text" > -->
+                <select class="govuk-select" name="choose-data" id="choose-data">
+                  <option value="" selected></option>          
+                  <option value="BRP (Biometric Residence Permit)">BRP</option>
+                  <option value="CID (Case Information Database)">CID </option>
+                  <option value="CRS (Central Reference System)">CRS</option>
+                  <option value="DNB (Dun and Bradstreet)">DNB</option>
+                  <option value="GBD (GB Data)">GBD</option>
+                  <option value="IABS (Immigration and Asylum Biometric System)">IABS</option>
+                  <option value="PCDP (Person Centric Data Platform)">PCDP</option>
+                  <option value="WPD (Worldpay)">WPD</option>
+                  <option value="ILRD (Overseas RALON data set)">ILRD</option>
+                  <option value="OCGM (Immigration and border force intelligence)">OCGM</option>
+                  <option value="S24 (Suspicious marriage reports)">S24</option>
+                  <option value="SIP (Single intelligence platform)">SIP</option>
+                  <option value="IMS (Allegations management system)">IMS</option>
+                  <option value="IMSR (IMS Referrals)">IMSR</option>
+                  <option value="BITD (Border and Immigration Transactional Data)">BITD</option>
+                  <option value="API (Advanced Passenger Information)">API</option>
+                  <option value="NEW1">NEW1</option>
+                  <option value="NEW2">NEW2</option>
+                </select>
+                <a href="#" id="addDataSources" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</a>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllDataSources" href="#">Add all data sources</a>
+            </div>
+             </div>
+             <div class="govuk-grid-column-one-half">
+               <a class="govuk-link--no-visited-state" id="removeAllDataSources" href="#">Remove all data sources</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label" for="event-name">
+                  Selected data sources
+                  <!-- <span class="govuk-caption-m">Add data srouces by searching and using the add button</span> -->
+                </label>
+              </h3>
+             
+              <br>
+              <span class="tags">
+                  
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CRS">CRS<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DNB">DNB<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="GBD">GBD<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IABS">IABS<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="PCDP">PCDP<span class="close-icon"> X</span> </a>
+                <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="WPD">WPD<span class="close-icon"> X</span> </a>
+              </span>
+              <input class="govuk-visually-hidden" id="dataToHighlightHidden" name="dataToHighlightHidden" type="text" value="BRP, CID, CRS, DNB, GBD, IABS, PCDP, WPD">
+
+            </div>
+</div>
+</div>
+<br>
+<button role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+  Save and continue
+</button>
+
+
+  <!-- <a id="newRequestContinue" href="what-do-you-want-displayed.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+    Continue
+  </a> -->
+</form>
+
+{% endblock %}

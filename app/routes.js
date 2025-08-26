@@ -18,7 +18,15 @@ router.post('/data-source-answer', function(request, response) {
     }
 })
 
+router.post('/advanced-options-answer', function(request, response) {
 
+    var advancedSources = request.session.data['advanced']
+    if (advancedSources == "yes"){
+        response.redirect("alpha-tomato-12a/advanced-options")
+    } else {
+        response.redirect("alpha-tomato-12a/check-settings-all-users-submit")
+    }
+})
 
 // router.post('/country-answer', function(request, response) {
 

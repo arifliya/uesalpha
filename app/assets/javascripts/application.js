@@ -3,9 +3,6 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
 
-// window.GOVUKPrototypeKit.documentReady(() => {
-//   // Add JavaScript here
-// })
 
 // var chkd=true; 
 // $('#selectAll').click(function(event) {  
@@ -91,6 +88,204 @@ $('#addTerms').click(function(e) {
 });
 
 
+$('#addDataSources').click(function(e) {
+    
+    if (!$('#choose-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#choose-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tags').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        // $('#dataToHighlightHidden').val($('#choose-data').val());
+        $('#dataToHighlightHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+    // $('.autocomplete__input').val("");
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+        // alert(this);
+        $(this).remove();
+        // $('#dataToHighlightHidden').val('');
+        // $('#dataToHighlightHidden').val(function(i,val) { 
+        //     return val + (!val ? '' : ', ') + array[i] ;
+        // });
+        // if ($('#dataToHighlightHidden').has(array)) {
+        //     $(array).remove();
+        // }
+        event.preventDefault();
+    });   
+
+});
+
+ $(".close-button").on('click', function (e) {
+    // let array = $('#dataToHighlightHidden').val().split(", ");
+    
+    // const t = (this.id);           
+
+    // array.splice(1,2)
+
+    // // alert(array)
+
+    $(this).remove();
+    e.preventDefault();
+}); 
+
+$('#removeAllDataSources').click(function() {
+    $('.tags a').remove()
+})
+
+$('#addAllDataSources').click(function() {
+    $('.tags').append('\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CRS">CRS<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DNB">DNB<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="GBD">GBD<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IABS">IABS<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="PCDP">PCDP<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="WPD">WPD<span class="close-icon"> X</span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+})
+
+
+$('#addContactDetails').click(function(e) {
+    
+    if (!$('#contact-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#contact-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tagsContact').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+       
+        $('#contactDataHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+   
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });   
+
+});
+
+$('#addWhereaboutsDetails').click(function(e) {
+    
+    if (!$('#whereabouts-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#whereabouts-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tagsWhereabouts').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+       
+        $('#whereaboutsDataHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+   
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });   
+
+});
+
+$('#addImmigrationDetails').click(function(e) {
+    
+    if (!$('#immigration-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#immigration-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tagsImmigration').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+       
+        $('#immigrationDataHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+   
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });   
+
+});
+
+$('#addTravelDetails').click(function(e) {
+    
+    if (!$('#travel-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#travel-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tagsTravel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+       
+        $('#travelDataHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+   
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });   
+
+});
+
+
+
+
+
 $('#breadCrumb-ID-2').click(function() {    
     
    if (window.location.href.indexOf("#people") > -1) {
@@ -130,12 +325,31 @@ if (window.location.href.indexOf("#contact") > -1) {
 });
 
 
+$('#saveContinue').click(function() {
+    if (window.location.href.indexOf("#people") > -1) {
+        $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    }
+    if (window.location.href.indexOf("#contact") > -1) {
+        $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    }
+})
+
+$('#advancedOptions').click(function() {
+    if (window.location.href.indexOf("#people") > -1) {
+        $('#formId2').attr('action', 'advanced-options#people');
+    }
+    if (window.location.href.indexOf("#contact") > -1) {
+        $('#formId2').attr('action', 'advanced-options#contact');
+    }
+})
+
 
 if (window.location.href.indexOf("#people") > -1) {
     // alert("found people");
     $('#breadCrumb-ID').text('People');
     $('#formId').attr('action', 'what-do-you-want-displayed#people');
-    $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    $('#formId3').attr('action', 'check-settings-all-users-submit#people');
     $('#typeOfSearch').text('People');
 }
 
@@ -143,9 +357,11 @@ if (window.location.href.indexOf("#contact") > -1) {
     // alert("found contact");
     $('#breadCrumb-ID').text('Contact numbers');
     $('#formId').attr('action', 'what-do-you-want-displayed#contact');
-    $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    $('#formId3').attr('action', 'check-settings-all-users-submit#contact');
     $('#typeOfSearch').text('Contact numbers');
 }
+
 
 
 // setTimeout(
@@ -180,3 +396,5 @@ $(function() {
         $('#changeViewDetailsURL').attr('href', 'details-completed.html');
     }, 10000);
 });
+
+

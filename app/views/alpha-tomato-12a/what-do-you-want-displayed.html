@@ -36,39 +36,33 @@
   Select all
 </a>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation" name="displayed-in-results" type="checkbox" value="Travel">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          Travel
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-2" name="displayed-in-results" type="checkbox" value=" Contact details">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="contact" name="displayed-in-results" type="checkbox" value="Contact details" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
           Contact details
         </label>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-3" name="displayed-in-results" type="checkbox" value=" Intelligence">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-          Intelligence
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="whereabouts" name="displayed-in-results" type="checkbox" value=" Whereabouts" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="whereabouts">
+          Whereabouts
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-4" name="displayed-in-results" type="checkbox" value=" Immigration">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="immigration" name="displayed-in-results" type="checkbox" value=" Immigration" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="immigration">
           Immigration       
         </label>
       </div>
-       <!-- <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-5" name="displayed-in-results" type="checkbox" value=" Match scoring">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
-          Match scoring
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="intel" name="displayed-in-results" type="checkbox" value=" Intelligence">
+        <label class="govuk-label govuk-checkboxes__label" for="intel">
+          Intelligence
         </label>
-      </div> -->
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input intel-checkboxes" id="organisation-6" name="displayed-in-results" type="checkbox" value=" Person details">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
-          Person details
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="travel" name="displayed-in-results" type="checkbox" value=" Travel">
+        <label class="govuk-label govuk-checkboxes__label" for="travel">
+          Travel
         </label>
       </div>
     </div>
@@ -86,13 +80,47 @@
     </div>
 </div>
 
+<!-- <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Do you want to use any other data sources?
+    </legend>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources-2" name="advanced" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources-2">
+          Yes
+        </label>
+      </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources" name="advanced" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div> -->
+
 <div class="govuk-button-group">
-  <button role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
-  Save and continue
+  <button id="saveContinue" role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+    Save and continue
+  </button>
+  <button id="advancedOptions" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+  Advanced options
 </button>
-  
 </div>
 
 </form>
+
+<!-- <form class="form" action="advanced-options" method="post">
+<div class="govuk-button-group">
+  <button role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+  Advanced options
+</button>
+
+</form> -->
 
 {% endblock %}
