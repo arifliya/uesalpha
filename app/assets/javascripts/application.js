@@ -126,7 +126,7 @@ $('#addDataSources').click(function(e) {
     });
 
     $('#choose-data').val('');
-    $( "ul#choose-data__listbox li" ).first().trigger( "click" );
+    $('ul#choose-data__listbox li' ).first().trigger( "click" );
     $('#choose-data').blur();
     e.preventDefault();
 
