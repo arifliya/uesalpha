@@ -65,7 +65,7 @@
 .display-panel {
     background-color: #fff;
     position: relative;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 14px 20px 14px;
     margin-bottom: 30px;
 }
 
@@ -81,6 +81,22 @@
     position: absolute;
 }
 
+.entity-options {
+    display: flex;
+    align-items: anchor-center;
+
+    img {
+        margin-right: 5px;
+    }
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    // background-color: black;
+    display: inline-block;
+}
 // a::before {
 //   content: "🔗";
 // }

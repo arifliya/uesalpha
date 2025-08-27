@@ -40,7 +40,8 @@
 </nav>
 
 <h1>Advanced options</h1>
-
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
 
 <form id="formId3" class="form" action="check-settings-all-users-submit" method="post">
   <div class="govuk-form-group">
@@ -53,7 +54,15 @@
     <option value="Strict">Strict</option>
   </select>
 </div>
-
+</div>
+<div id="confidenceImages" class="govuk-grid-column-two-thirds">
+  <img class="con con-rec" src="/public/images/confidence-recommended.svg" alt="">
+  <img class="con con-fuz" src="/public/images/confidence-fuzzy.svg" alt="">
+  <img class="con con-str" src="/public/images/confidence-strict.svg" alt="">
+</div>
+</div>
+<br>
+<br>
 <div class="condition">
         <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
@@ -69,7 +78,7 @@
               <div class="flex">
                 <!-- <input class="govuk-input govuk-input--width-20 govuk-!-margin-right-5" id="termsToHighlight" name="termsToHighlight" type="text" > -->
                 <select class="govuk-select" name="choose-data" id="choose-data">
-                  <option value="" selected></option>          
+                  <option value="hi" selected></option>          
                   <option value="BRP (Biometric Residence Permit)">BRP</option>
                   <option value="CID (Case Information Database)">CID </option>
                   <option value="CRS (Central Reference System)">CRS</option>
@@ -89,7 +98,7 @@
                   <option value="NEW1">NEW1</option>
                   <option value="NEW2">NEW2</option>
                 </select>
-                <a href="#" id="addDataSources" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</a>
+                <button id="addDataSources" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
               </div>
               <a class="govuk-link--no-visited-state" id="addAllDataSources" href="#">Add all data sources</a>
             </div>

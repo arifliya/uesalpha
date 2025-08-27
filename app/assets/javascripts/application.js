@@ -88,6 +88,27 @@ $('#addTerms').click(function(e) {
 });
 
 
+$( document ).ready(function() {
+    $(".con-fuz").hide();
+    $(".con-str").hide();
+
+    $("#match-settings").change(function(){
+        if($(this).val()=='Fuzzy'){ 
+            $(".con").hide();
+            $(".con-fuz").show();   
+        }
+        if($(this).val()=='Strict'){ 
+            $(".con").hide();
+            $(".con-str").show();   
+        }
+         if($(this).val()=='Recommended'){ 
+            $(".con").hide();
+            $(".con-rec").show();   
+        }
+    });
+});
+
+
 $('#addDataSources').click(function(e) {
     
     if (!$('#choose-data').val()) {
@@ -104,7 +125,9 @@ $('#addDataSources').click(function(e) {
         });
     });
 
-    // $('.autocomplete__input').val("");
+    $('#choose-data').val('');
+    $( "ul#choose-data__listbox li" ).first().trigger( "click" );
+    $('#choose-data').blur();
     e.preventDefault();
 
     }
@@ -178,6 +201,9 @@ $('#addContactDetails').click(function(e) {
         });
     });
 
+    $('#contact-data').val('');
+    $( "ul#contact-data__listbox li" ).first().trigger( "click" );
+    $('#contact-data').blur();
    
     e.preventDefault();
 
@@ -208,7 +234,10 @@ $('#addWhereaboutsDetails').click(function(e) {
         });
     });
 
-   
+    $('#whereabouts-data').val('');
+    $( "ul#whereabouts-data__listbox li" ).first().trigger( "click" );
+    $('#whereabouts-data').blur();
+
     e.preventDefault();
 
     }
@@ -238,6 +267,9 @@ $('#addImmigrationDetails').click(function(e) {
         });
     });
 
+    $('#immigration-data').val('');
+    $( "ul#immigration-data__listbox li" ).first().trigger( "click" );
+    $('#immigration-data').blur();
    
     e.preventDefault();
 
