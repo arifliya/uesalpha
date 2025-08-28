@@ -67,7 +67,7 @@ $('#addTerms').click(function(e) {
     var array = $('#termsToHighlight').val().split(",");
 
     $.each(array,function(i){
-        $('.tags').append('<a href="#" style="color:white" class="close-button">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tags').append('<a href="#" style="color:white" class="close-button">' + array[i] + '<span class="close-icon"></span> </a>');
         $('#termsToHighlightHidden').val($('#termsToHighlight').val());
     });
     
@@ -138,7 +138,7 @@ $('#addDataSources').click(function(e) {
     var array = $('#choose-data').val().split(",");
 
     $.each(array,function(i){
-        $('.tags').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tags').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
         // $('#dataToHighlightHidden').val($('#choose-data').val());
         $('#dataToHighlightHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
@@ -187,14 +187,14 @@ $('#removeAllDataSources').click(function(e) {
 
 $('#addAllDataSources').click(function(e) {
     $('.tags').append('\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CRS">CRS<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DNB">DNB<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="GBD">GBD<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IABS">IABS<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="PCDP">PCDP<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="WPD">WPD<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CRS">CRS<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DNB">DNB<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="GBD">GBD<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IABS">IABS<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="PCDP">PCDP<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="WPD">WPD<span class="close-icon"></span> </a>\
         ')
 
         $('.close-button').click(function(event) {
@@ -214,9 +214,9 @@ $('#removeAllContactDetails').click(function(e) {
 
 $('#addAllContactDetails').click(function(e) {
     $('.tagsContact').append('\
-             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known email">Last known email<span class="close-icon"> X</span> </a>\
+             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known email">Last known email<span class="close-icon"></span> </a>\
         ')
 
         $('.close-button').click(function(event) {
@@ -236,9 +236,9 @@ $('#removeAllWhereaboutsDetails').click(function(e) {
 
 $('#addAllWhereaboutsDetails').click(function(e) {
     $('.tagsWhereabouts').append('\
-             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address ICE">Last known address ICE region<span class="close-icon"> X</span> </a>\
+             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address ICE">Last known address ICE region<span class="close-icon"></span> </a>\
         ')
 
         $('.close-button').click(function(event) {
@@ -258,25 +258,25 @@ $('#removeAllImmigrationDetails').click(function(e) {
 
 $('#addAllImmigrationDetails').click(function(e) {
     $('.tagsImmigration').append('\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome">Outcome<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome date">Outcome date<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Expiry date">Expiry date<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Leave conditions">Leave conditions<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Work restrictions">Work restrictions<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Source">Source<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case ID">Case ID<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last know immigration details">Last know immigration details<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known leave expiry date">Last known leave expiry date<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known immigration harm rating">Last known immigration harm rating<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Immigration detention">Immigration detention<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removal details">Removal details<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Special conditions">Special conditions<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Reporting status">Reporting status<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO history">DO history<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO breach flag">DO breach flag<span class="close-icon"> X</span> </a>\
-            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removability">Removability<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome">Outcome<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome date">Outcome date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Expiry date">Expiry date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Leave conditions">Leave conditions<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Work restrictions">Work restrictions<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Source">Source<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case ID">Case ID<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last know immigration details">Last know immigration details<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known leave expiry date">Last known leave expiry date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known immigration harm rating">Last known immigration harm rating<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Immigration detention">Immigration detention<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removal details">Removal details<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Special conditions">Special conditions<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Reporting status">Reporting status<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO history">DO history<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO breach flag">DO breach flag<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removability">Removability<span class="close-icon"></span> </a>\
         ')
 
         $('.close-button').click(function(event) {
@@ -298,7 +298,7 @@ $('#addContactDetails').click(function(e) {
     var array = $('#contact-data').val().split(",");
 
     $.each(array,function(i){
-        $('.tagsContact').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tagsContact').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
        
         $('#contactDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
@@ -331,7 +331,7 @@ $('#addWhereaboutsDetails').click(function(e) {
     var array = $('#whereabouts-data').val().split(",");
 
     $.each(array,function(i){
-        $('.tagsWhereabouts').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tagsWhereabouts').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
        
         $('#whereaboutsDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
@@ -364,7 +364,7 @@ $('#addImmigrationDetails').click(function(e) {
     var array = $('#immigration-data').val().split(",");
 
     $.each(array,function(i){
-        $('.tagsImmigration').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tagsImmigration').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
        
         $('#immigrationDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
@@ -397,7 +397,7 @@ $('#addTravelDetails').click(function(e) {
     var array = $('#travel-data').val().split(",");
 
     $.each(array,function(i){
-        $('.tagsTravel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"> X</span> </a>');
+        $('.tagsTravel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
        
         $('#travelDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;

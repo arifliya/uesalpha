@@ -59,7 +59,12 @@
 }
 
 .close-icon {
+    display: inline-flex;
     margin-left: 10px;
+    width:14px; /*width of your image*/
+    height:14px; /*height of your image*/
+    background-image:url('/public/images/close-icon.svg');
+    margin-top: 3px;
 }
 
 .display-panel {

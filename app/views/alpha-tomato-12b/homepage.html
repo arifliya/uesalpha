@@ -1,0 +1,76 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+<div id="inProgressBanner" class="hods-alert govuk-visually-hidden">
+  <h2 class="hods-alert__heading">New search request sent</h2>
+  <p>
+   Search request for <strong>{{ data['unique'] }}</strong> is being processed.
+  </p>
+</div>
+
+<div id="completedBanner" class="hods-alert hods-alert--success">
+  <h2 class="hods-alert__heading">
+    Search completed
+  </h2>
+  <p>
+    <strong><a class="govuk-link govuk-link--no-visited-state" href="details-completed.html">{{ data['unique'] }} results</a> is ready to download.</strong>
+  </p>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1>Universal Enrichment Service (UES)
+    <!-- <span class="govuk-caption-l">Submit a large volume of data to search over multiple data sources simultaneously</span> -->
+  </h1>
+  <br>
+  <a href="choose-your-search.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+    New request
+  </a>
+  </div>
+</div>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Your search history</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Submitted time</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{ data['unique'] }}</th>
+      <td class="govuk-table__cell">14:59 30 Apr 2025</td>
+      <td class="govuk-table__cell"><strong id="inProgressTag" class="govuk-tag govuk-tag--blue">In progress</strong></td>
+      <td class="govuk-table__cell"><a id="changeViewDetailsURL" href="details-in-progress.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">File name 2</th>
+      <td class="govuk-table__cell">11:19 29 Apr 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Completed</strong></td>
+      <td class="govuk-table__cell"><a href="details-completed.html" class="govuk-link govuk-link--no-visited-state">View details</a></td>
+    </tr>
+   
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">File name 1</th>
+      <td class="govuk-table__cell">08:15 28 Apr 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Failed</strong></td>
+      <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View details</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

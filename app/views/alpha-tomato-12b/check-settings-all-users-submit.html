@@ -74,7 +74,7 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Match confidence settings
+            Match confidence settings (advanced)
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['confidenceOption'] }}
@@ -86,42 +86,54 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Data sources
+            Data sources (advanced)
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['dataToHighlightHidden'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden">Default data sources</span></a>
+            <a class="govuk-link govuk-link--no-visited-state" href="advanced-options.html">Change<span class="govuk-visually-hidden">Default data sources</span></a>
           </dd>
         </div>
         
       
-        <!-- <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Travel data sources
+            Contact details (advanced)
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['travel-data-sources'] }}
+            {{ data['contactDataHidden'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden">Travel data sources</span></a>
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Contact</span></a>
           </dd>
-        </div> -->
+        </div>
 
         
 
-         <!-- <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Legacy data sources
+            Location history (advanced)
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['legacy-data'] }}
+            {{ data['whereaboutsDataHidden'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden">Legacy data sources</span></a>
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Location history</span></a>
           </dd>
-        </div>   -->
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Immigration report details (advanced)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['immigrationDataHidden'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Location history</span></a>
+          </dd>
+        </div>
       </dl>
 
       <a href="homepage.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
