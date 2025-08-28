@@ -41,7 +41,7 @@
 <form id="formId3" class="form" action="check-settings-all-users-submit" method="post">
 <h1>Advanced options</h1>
  <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
+  <div class="govuk-grid-column-one-half">
 
 
   <!-- <div class="govuk-form-group">
@@ -55,7 +55,7 @@
   </select>
 </div> -->
 
-<div class="govuk-form-group">
+<!-- <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <label class="govuk-label govuk-!-font-weight-bold" for="match-settings">
@@ -83,18 +83,62 @@
       </div>
     </div>
   </fieldset>
+</div> -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <label class="govuk-label govuk-!-font-weight-bold" for="match-settings">
+    Match confidence settings
+  </label>
+    </legend>
+    <!-- <div id="signIn-hint" class="govuk-hint">
+      You’ll need an account to prove your identity and complete your Self Assessment
+    </div> -->
+    <div id="match-settings" class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption" name="confidenceOption" type="radio" value="Recommended" checked="checked">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption">
+          Recommended matching
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Provides the level of matching most appropriate to the search type
+        </div>
+      </div>
+     
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption-3" name="confidenceOption" type="radio" value="Strict">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption-3">
+          Strict matching
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+         Decreases the number of results; provides more accurate matches
+        </div>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption-2" name="confidenceOption" type="radio" value="Broad">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption-2">
+          Broad matching
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+         Increases the number of results; provides less accurate matches
+        </div>
+      </div>
+    </div>
+  </fieldset>
 </div>
+
 </div>
-<div id="confidenceImages" class="govuk-grid-column-two-thirds">
+<div id="confidenceImages" class="govuk-grid-column-one-half">
   <br>
   <br>
   <br>
   <img class="con con-rec" src="/public/images/confidence-recommended.svg" alt="">
   <img class="con con-fuz" src="/public/images/confidence-fuzzy.svg" alt="">
   <img class="con con-str" src="/public/images/confidence-strict.svg" alt="">
+  <!-- <br>
   <br>
-  <br>
-  <p class="govuk-body">Annotation info coming soon</p>
+  <p class="govuk-body">Annotation info coming soon</p> -->
 </div>
 </div>
 <br>

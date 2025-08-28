@@ -180,11 +180,12 @@ $('#addDataSources').click(function(e) {
     e.preventDefault();
 }); 
 
-$('#removeAllDataSources').click(function() {
-    $('.tags a').remove()
+$('#removeAllDataSources').click(function(e) {
+    $('.tags a').remove();
+    e.preventDefault();
 })
 
-$('#addAllDataSources').click(function() {
+$('#addAllDataSources').click(function(e) {
     $('.tags').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"> X</span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"> X</span> </a>\
@@ -202,14 +203,16 @@ $('#addAllDataSources').click(function() {
         
         event.preventDefault();
     });
+    e.preventDefault();
 })
 
 
-$('#removeAllContactDetails').click(function() {
-    $('.tagsContact a').remove()
+$('#removeAllContactDetails').click(function(e) {
+    $('.tagsContact a').remove();
+    e.preventDefault();
 })
 
-$('#addAllContactDetails').click(function() {
+$('#addAllContactDetails').click(function(e) {
     $('.tagsContact').append('\
              <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"> X</span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"> X</span> </a>\
@@ -222,14 +225,16 @@ $('#addAllContactDetails').click(function() {
         
         event.preventDefault();
     });
+    e.preventDefault();
 })
 
 
-$('#removeAllWhereaboutsDetails').click(function() {
-    $('.tagsWhereabouts a').remove()
+$('#removeAllWhereaboutsDetails').click(function(e) {
+    $('.tagsWhereabouts a').remove();
+    e.preventDefault();
 })
 
-$('#addAllWhereaboutsDetails').click(function() {
+$('#addAllWhereaboutsDetails').click(function(e) {
     $('.tagsWhereabouts').append('\
              <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"> X</span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"> X</span> </a>\
@@ -242,14 +247,16 @@ $('#addAllWhereaboutsDetails').click(function() {
         
         event.preventDefault();
     });
+    e.preventDefault();
 })
 
 
-$('#removeAllImmigrationDetails').click(function() {
-    $('.tagsImmigration a').remove()
+$('#removeAllImmigrationDetails').click(function(e) {
+    $('.tagsImmigration a').remove();
+    e.preventDefault();
 })
 
-$('#addAllImmigrationDetails').click(function() {
+$('#addAllImmigrationDetails').click(function(e) {
     $('.tagsImmigration').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"> X</span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"> X</span> </a>\
@@ -278,6 +285,7 @@ $('#addAllImmigrationDetails').click(function() {
         
         event.preventDefault();
     });
+    e.preventDefault();
 })
 
 
