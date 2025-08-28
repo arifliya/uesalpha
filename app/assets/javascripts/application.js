@@ -185,6 +185,82 @@ $('#addAllDataSources').click(function() {
 })
 
 
+$('#removeAllContactDetails').click(function() {
+    $('.tagsContact a').remove()
+})
+
+$('#addAllContactDetails').click(function() {
+    $('.tagsContact').append('\
+             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known email">Last known email<span class="close-icon"> X</span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+})
+
+
+$('#removeAllWhereaboutsDetails').click(function() {
+    $('.tagsWhereabouts a').remove()
+})
+
+$('#addAllWhereaboutsDetails').click(function() {
+    $('.tagsWhereabouts').append('\
+             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address ICE">Last known address ICE region<span class="close-icon"> X</span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+})
+
+
+$('#removeAllImmigrationDetails').click(function() {
+    $('.tagsImmigration a').remove()
+})
+
+$('#addAllImmigrationDetails').click(function() {
+    $('.tagsImmigration').append('\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome">Outcome<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome date">Outcome date<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Expiry date">Expiry date<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Leave conditions">Leave conditions<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Work restrictions">Work restrictions<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Source">Source<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case ID">Case ID<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last know immigration details">Last know immigration details<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known leave expiry date">Last known leave expiry date<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known immigration harm rating">Last known immigration harm rating<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Immigration detention">Immigration detention<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removal details">Removal details<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Special conditions">Special conditions<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Reporting status">Reporting status<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO history">DO history<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO breach flag">DO breach flag<span class="close-icon"> X</span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removability">Removability<span class="close-icon"> X</span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+})
+
+
 $('#addContactDetails').click(function(e) {
     
     if (!$('#contact-data').val()) {
@@ -358,21 +434,23 @@ if (window.location.href.indexOf("#contact") > -1) {
 
 
 $('#saveContinue').click(function() {
-    if (window.location.href.indexOf("#people") > -1) {
-        $('#formId2').attr('action', 'check-settings-all-users-submit#people');
-    }
-    if (window.location.href.indexOf("#contact") > -1) {
-        $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
-    }
+    $('#formId2').attr('action', 'check-settings-all-users-submit');
+    // if (window.location.href.indexOf("#people") > -1) {
+    //     $('#formId2').attr('action', 'check-settings-all-users-submit#people');
+    // }
+    // if (window.location.href.indexOf("#contact") > -1) {
+    //     $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
+    // }
 })
 
 $('#advancedOptions').click(function() {
-    if (window.location.href.indexOf("#people") > -1) {
-        $('#formId2').attr('action', 'advanced-options#people');
-    }
-    if (window.location.href.indexOf("#contact") > -1) {
-        $('#formId2').attr('action', 'advanced-options#contact');
-    }
+    $('#formId2').attr('action', 'advanced-options');
+    // if (window.location.href.indexOf("#people") > -1) {
+    //     $('#formId2').attr('action', 'advanced-options#people');
+    // }
+    // if (window.location.href.indexOf("#contact") > -1) {
+    //     $('#formId2').attr('action', 'advanced-options#contact');
+    // }
 })
 
 
