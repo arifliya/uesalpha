@@ -44,21 +44,57 @@
   <div class="govuk-grid-column-one-third">
 
 
-  <div class="govuk-form-group">
+  <!-- <div class="govuk-form-group">
   <label class="govuk-label" for="match-settings">
     Match confidence settings
   </label>
   <select class="govuk-select" id="match-settings" name="match-settings">
-    <option value="Fuzzy">Fuzzy</option>
+    <option value="Fuzzy">Broad</option>
     <option value="Recommended" selected>Recommended</option>
     <option value="Strict">Strict</option>
   </select>
+</div> -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <label class="govuk-label govuk-!-font-weight-bold" for="match-settings">
+    Match confidence settings
+  </label>
+    </legend>
+    <div id="match-settings" class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption" name="confidenceOption" type="radio" value="Broad">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption">
+          Broad
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption-2" name="confidenceOption" type="radio" value="Recommended" checked="checked">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption-2">
+          Recommended
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confidenceOption-3" name="confidenceOption" type="radio" value="Strict">
+        <label class="govuk-label govuk-radios__label" for="confidenceOption-3">
+          Strict
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 </div>
 <div id="confidenceImages" class="govuk-grid-column-two-thirds">
+  <br>
+  <br>
+  <br>
   <img class="con con-rec" src="/public/images/confidence-recommended.svg" alt="">
   <img class="con con-fuz" src="/public/images/confidence-fuzzy.svg" alt="">
   <img class="con con-str" src="/public/images/confidence-strict.svg" alt="">
+  <br>
+  <br>
+  <p class="govuk-body">Annotation info coming soon</p>
 </div>
 </div>
 <br>
@@ -70,7 +106,7 @@
  
             <div class="govuk-form-group">
               <h3 class="govuk-label-wrapper">
-                <label class="govuk-label" for="event-name">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
                   Information sources
                   <span class="govuk-caption-m">Search and add data sources</span>
                 </label>
@@ -106,7 +142,7 @@
              <div class="govuk-grid-column-one-half">
                <a class="govuk-link--no-visited-state" id="removeAllDataSources" href="#">Remove all data sources</a>
               <h3 class="govuk-label-wrapper">
-                <label class="govuk-label" for="event-name">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
                   Selected data sources
                   <!-- <span class="govuk-caption-m">Add data srouces by searching and using the add button</span> -->
                 </label>

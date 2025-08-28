@@ -88,12 +88,32 @@ $('#addTerms').click(function(e) {
 });
 
 
+// $( document ).ready(function() {
+//     $(".con-fuz").hide();
+//     $(".con-str").hide();
+
+//     $("#match-settings").change(function(){
+//         if($(this).val()=='Fuzzy'){ 
+//             $(".con").hide();
+//             $(".con-fuz").show();   
+//         }
+//         if($(this).val()=='Strict'){ 
+//             $(".con").hide();
+//             $(".con-str").show();   
+//         }
+//          if($(this).val()=='Recommended'){ 
+//             $(".con").hide();
+//             $(".con-rec").show();   
+//         }
+//     });
+// });
+
 $( document ).ready(function() {
     $(".con-fuz").hide();
     $(".con-str").hide();
 
-    $("#match-settings").change(function(){
-        if($(this).val()=='Fuzzy'){ 
+    $("#match-settings input").change(function(){
+        if($(this).val()=='Broad'){ 
             $(".con").hide();
             $(".con-fuz").show();   
         }
