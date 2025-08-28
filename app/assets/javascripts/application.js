@@ -113,15 +113,15 @@ $( document ).ready(function() {
     $(".con-str").hide();
 
     $("#match-settings input").change(function(){
-        if($(this).val()=='Broad'){ 
+        if($(this).val()=='Broad matching'){ 
             $(".con").hide();
             $(".con-fuz").show();   
         }
-        if($(this).val()=='Strict'){ 
+        if($(this).val()=='Strict matching'){ 
             $(".con").hide();
             $(".con-str").show();   
         }
-         if($(this).val()=='Recommended'){ 
+         if($(this).val()=='Recommended matching'){ 
             $(".con").hide();
             $(".con-rec").show();   
         }

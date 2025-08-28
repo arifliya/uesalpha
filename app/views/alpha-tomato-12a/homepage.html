@@ -12,18 +12,18 @@
 {% block content %}
 <!-- Add your page content here -->
 <div id="inProgressBanner" class="hods-alert govuk-visually-hidden">
-  <h2 class="hods-alert__heading">New search request sent</h2>
+  <h2 class="hods-alert__heading">Request sent</h2>
   <p>
-   Search request for <strong>{{ data['unique'] }}</strong> is being processed.
+   <strong>{{ data['unique'] }}</strong> is being processed.
   </p>
 </div>
 
 <div id="completedBanner" class="hods-alert hods-alert--success">
   <h2 class="hods-alert__heading">
-    Search completed
+    Processing complete
   </h2>
   <p>
-    <strong><a class="govuk-link govuk-link--no-visited-state" href="details-completed.html">{{ data['unique'] }} results</a> is ready to download.</strong>
+    Download <strong><a class="govuk-link govuk-link--no-visited-state" href="details-completed.html">{{ data['unique'] }}</a></strong>
   </p>
 </div>
 
