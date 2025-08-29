@@ -471,6 +471,10 @@ $('#saveContinue').click(function() {
     // }
 })
 
+$('#saveContinue2').click(function() {
+    $('#formId2').attr('action', 'filter-download');
+})
+
 $('#advancedOptions').click(function() {
     $('#formId2').attr('action', 'advanced-options');
     // if (window.location.href.indexOf("#people") > -1) {
