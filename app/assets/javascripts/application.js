@@ -288,6 +288,62 @@ $('#addAllImmigrationDetails').click(function(e) {
     e.preventDefault();
 })
 
+$('#removeAllIntelDetails').click(function(e) {
+    $('.tagsIntel a').remove();
+    e.preventDefault();
+})
+
+$('#addAllIntelDetails').click(function(e) {
+    $('.tagsIntel').append('\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS">IMS<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP">SIP<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="NOD">NOD<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report ID">SIP Report ID<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report date">SIP Report date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report title">SIP Report title<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report category">SIP Report category<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report detail">SIP Report detail<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report ID">IMS Report ID<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report date">IMS Report date<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report title">IMS Report title<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report category">IMS Report category<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report detail">IMS Report detail<span class="close-icon"></span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+    e.preventDefault();
+})
+
+
+$('#removeAllTravelDetails').click(function(e) {
+    $('.tagsTravel a').remove();
+    e.preventDefault();
+})
+
+$('#addAllTravelDetails').click(function(e) {
+    $('.tagsTravel').append('\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Origin country">Origin country<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known travel details">Last known travel details<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Flight code">Flight code<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Destination country">Destination country<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Location code">Location code<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Location description">Location description<span class="close-icon"></span> </a>\
+        ')
+
+        $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });
+    e.preventDefault();
+})
+
 
 $('#addContactDetails').click(function(e) {
     
@@ -388,6 +444,40 @@ $('#addImmigrationDetails').click(function(e) {
 
 });
 
+
+$('#addIntelDetails').click(function(e) {
+    
+    if (!$('#intel-data').val()) {
+        return false;
+    } else {
+
+    var array = $('#intel-data').val().split(",");
+
+    $.each(array,function(i){
+        $('.tagsIntel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
+       
+        $('#intelDataHidden').val(function(i,val) { 
+            return val + (!val ? '' : ', ') + array[i] ;
+        });
+    });
+
+    $('#intel-data').val('');
+    $( "ul#intel-data__listbox li" ).first().trigger( "click" );
+    $('#intel-data').blur();
+   
+    e.preventDefault();
+
+    }
+
+    $('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        event.preventDefault();
+    });   
+
+});
+
 $('#addTravelDetails').click(function(e) {
     
     if (!$('#travel-data').val()) {
@@ -404,6 +494,9 @@ $('#addTravelDetails').click(function(e) {
         });
     });
 
+    $('#travel-data').val('');
+    $( "ul#travel-data__listbox li" ).first().trigger( "click" );
+    $('#travel-data').blur();
    
     e.preventDefault();
 
@@ -504,8 +597,49 @@ if (window.location.href.indexOf("#contact") > -1) {
     $('#typeOfSearch').text('Contact numbers');
 }
 
+// if ($('#whatFiltersToShow').indexOf('Contact details')) {
+//     alert('has contact');
+// }
 
+if ($('#whatFiltersToShow:contains("Contact")').length > 0) {
+     $('.contact-group').show()
+     $('#contactCheckAnswersAdvanced').show()
+} else {
+    $('.contact-group').hide()
+    $('#contactCheckAnswersAdvanced').hide()
+}
 
+if ($('#whatFiltersToShow:contains("Location")').length > 0) {
+    $('.whereabouts-group').show()
+    $('#locationCheckAnswersAdvanced').show()
+} else {
+    $('.whereabouts-group').hide()
+    $('#locationCheckAnswersAdvanced').hide()
+}
+
+if ($('#whatFiltersToShow:contains("Immigration")').length > 0) {
+     $('.immigration-group').show()
+     $('#immigrationCheckAnswersAdvanced').show()
+} else {
+    $('.immigration-group').hide()
+    $('#immigrationCheckAnswersAdvanced').hide()
+}
+
+if ($('#whatFiltersToShow:contains("Intelligence")').length > 0) {
+     $('.intel-group').show()
+     $('#intelCheckAnswersAdvanced').show()
+} else {
+    $('.intel-group').hide()
+    $('#intelCheckAnswersAdvanced').hide()
+}
+
+if ($('#whatFiltersToShow:contains("Travel")').length > 0) {
+     $('.travel-group').show()
+     $('#travelCheckAnswersAdvanced').show()
+} else {
+    $('.travel-group').hide()
+    $('#travelCheckAnswersAdvanced').hide()
+}
 // setTimeout(
 //   function() 
 //   {

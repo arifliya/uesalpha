@@ -138,6 +138,10 @@
     @extend #addDataSources;
 }
 
+#addIntelDetails {
+    @extend #addDataSources;
+}
+
 #addTravelDetails {
     @extend #addDataSources;
 }
@@ -155,6 +159,10 @@
 }
 
 #removeAllImmigrationDetails {
+    @extend #removeAllDataSources
+}
+
+#removeAllIntelDetails {
     @extend #removeAllDataSources
 }
 

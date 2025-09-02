@@ -59,18 +59,6 @@
             <a id="breadCrumb-ID-3" class="govuk-link govuk-link--no-visited-state" href="what-do-you-want-displayed.html">Change<span class="govuk-visually-hidden"> What do you want displayed in your output?</span></a>
           </dd>
         </div>
-     
-        <!-- <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Match confidence settings
-          </dt>
-          <dd class="govuk-summary-list__value">
-          {{ data['organisation'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link govuk-link--no-visited-state" href="settings.html">Change<span class="govuk-visually-hidden"> Details to display in results</span></a>
-          </dd>
-        </div> -->
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -97,7 +85,7 @@
         </div>
         
       
-        <div class="govuk-summary-list__row">
+        <div id="contactCheckAnswersAdvanced" class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Contact details (advanced)
           </dt>
@@ -109,9 +97,8 @@
           </dd>
         </div>
 
-        
 
-        <div class="govuk-summary-list__row">
+        <div id="locationCheckAnswersAdvanced" class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Location history (advanced)
           </dt>
@@ -123,7 +110,7 @@
           </dd>
         </div>
         
-        <div class="govuk-summary-list__row">
+        <div id="immigrationCheckAnswersAdvanced" class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Immigration report details (advanced)
           </dt>
@@ -131,7 +118,31 @@
             {{ data['immigrationDataHidden'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Location history</span></a>
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Immigration report details</span></a>
+          </dd>
+        </div>
+
+        <div id="intelCheckAnswersAdvanced" class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Intelligence report details (advanced)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['intelDataHidden'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Intelligence report details</span></a>
+          </dd>
+        </div>
+
+        <div id="travelCheckAnswersAdvanced" class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Travel history details (advanced)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['travelDataHidden'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Travel history</span></a>
           </dd>
         </div>
       </dl>
@@ -142,4 +153,6 @@
 
     </div>
   </div>
+
+  <div id="whatFiltersToShow" class="govuk-visually-hidden">{{ data['displayed-in-results'] }}</div>
 {% endblock %}
