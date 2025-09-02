@@ -386,7 +386,7 @@ $('#addContactDetails').click(function(e) {
        
         $(this).remove();
 
-        alert('hello')
+        // if ($())
         
         event.preventDefault();
     });   
