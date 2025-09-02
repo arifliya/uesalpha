@@ -140,6 +140,7 @@ $('#addDataSources').click(function(e) {
     $.each(array,function(i){
         $('.tags').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
         // $('#dataToHighlightHidden').val($('#choose-data').val());
+        $('#noDataSources').hide();
         $('#dataToHighlightHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
@@ -182,10 +183,12 @@ $('#addDataSources').click(function(e) {
 
 $('#removeAllDataSources').click(function(e) {
     $('.tags a').remove();
+    $('#noDataSources').show();
     e.preventDefault();
 })
 
 $('#addAllDataSources').click(function(e) {
+    $('#noDataSources').hide();
     $('.tags').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BRP">BRP<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="CID">CID<span class="close-icon"></span> </a>\
@@ -209,10 +212,12 @@ $('#addAllDataSources').click(function(e) {
 
 $('#removeAllContactDetails').click(function(e) {
     $('.tagsContact a').remove();
+    $('#noContactData').show();
     e.preventDefault();
 })
 
 $('#addAllContactDetails').click(function(e) {
+    $('#noContactData').hide();
     $('.tagsContact').append('\
              <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"></span> </a>\
@@ -231,10 +236,12 @@ $('#addAllContactDetails').click(function(e) {
 
 $('#removeAllWhereaboutsDetails').click(function(e) {
     $('.tagsWhereabouts a').remove();
+    $('#noLocationData').show();
     e.preventDefault();
 })
 
 $('#addAllWhereaboutsDetails').click(function(e) {
+    $('#noLocationData').hide();
     $('.tagsWhereabouts').append('\
              <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"></span> </a>\
@@ -252,11 +259,13 @@ $('#addAllWhereaboutsDetails').click(function(e) {
 
 
 $('#removeAllImmigrationDetails').click(function(e) {
+    $('#noImmigrationData').show();
     $('.tagsImmigration a').remove();
     e.preventDefault();
 })
 
 $('#addAllImmigrationDetails').click(function(e) {
+    $('#noImmigrationData').hide();
     $('.tagsImmigration').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"></span> </a>\
@@ -290,10 +299,12 @@ $('#addAllImmigrationDetails').click(function(e) {
 
 $('#removeAllIntelDetails').click(function(e) {
     $('.tagsIntel a').remove();
+    $('#noIntelData').hide();
     e.preventDefault();
 })
 
 $('#addAllIntelDetails').click(function(e) {
+    $('#noIntelData').show();
     $('.tagsIntel').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS">IMS<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP">SIP<span class="close-icon"></span> </a>\
@@ -322,10 +333,12 @@ $('#addAllIntelDetails').click(function(e) {
 
 $('#removeAllTravelDetails').click(function(e) {
     $('.tagsTravel a').remove();
+    $('#noTravelData').show();
     e.preventDefault();
 })
 
 $('#addAllTravelDetails').click(function(e) {
+    $('#noTravelData').hide();
     $('.tagsTravel').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Origin country">Origin country<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known travel details">Last known travel details<span class="close-icon"></span> </a>\
@@ -355,7 +368,7 @@ $('#addContactDetails').click(function(e) {
 
     $.each(array,function(i){
         $('.tagsContact').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
-       
+        $('#noContactData').hide();
         $('#contactDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
@@ -372,6 +385,8 @@ $('#addContactDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
+
+        alert('hello')
         
         event.preventDefault();
     });   
@@ -388,7 +403,7 @@ $('#addWhereaboutsDetails').click(function(e) {
 
     $.each(array,function(i){
         $('.tagsWhereabouts').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
-       
+        $('#noLocationData').hide();
         $('#whereaboutsDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
@@ -421,7 +436,7 @@ $('#addImmigrationDetails').click(function(e) {
 
     $.each(array,function(i){
         $('.tagsImmigration').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
-       
+        $('#noImmigrationData').hide();
         $('#immigrationDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
@@ -455,7 +470,7 @@ $('#addIntelDetails').click(function(e) {
 
     $.each(array,function(i){
         $('.tagsIntel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
-       
+        $('#noIntelData').hide();
         $('#intelDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
@@ -488,7 +503,7 @@ $('#addTravelDetails').click(function(e) {
 
     $.each(array,function(i){
         $('.tagsTravel').append('<a href="#" style="color:white" class="close-button" name="dataTypeNew" value="' + array[i] + '">' + array[i] + '<span class="close-icon"></span> </a>');
-       
+        $('#noTravelData').hide();
         $('#travelDataHidden').val(function(i,val) { 
             return val + (!val ? '' : ', ') + array[i] ;
         });
