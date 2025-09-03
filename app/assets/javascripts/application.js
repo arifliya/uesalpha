@@ -227,6 +227,12 @@ $('#addAllContactDetails').click(function(e) {
         $('.close-button').click(function(event) {
        
         $(this).remove();
+
+        if ($(".tagsContact a").is(":visible")) {
+            $('#noContactData').hide();
+        } else {
+        $('#noContactData').show();
+        }
         
         event.preventDefault();
     });
@@ -386,12 +392,24 @@ $('#addContactDetails').click(function(e) {
        
         $(this).remove();
 
-        // if ($())
+         if ($(".tagsContact a").is(":visible")) {
+            $('#noContactData').hide();
+        } else {
+        $('#noContactData').show();
+        }
+        
         
         event.preventDefault();
     });   
 
 });
+
+if ($(".tagsContact a").is(":visible")) {
+    $('#noContactData').hide();
+} else {
+$('#noContactData').show();
+}
+
 
 $('#addWhereaboutsDetails').click(function(e) {
     
@@ -520,15 +538,25 @@ $('#addTravelDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
-        
+
         event.preventDefault();
     });   
 
 });
 
+$('.close-button').click(function(event) {
+       
+        $(this).remove();
+        
+        if ($(".tagsContact a").is(":visible")) {
+            $('#noContactData').hide();
+        } else {
+        $('#noContactData').show();
+        }
 
+ event.preventDefault();
 
-
+});
 
 $('#breadCrumb-ID-2').click(function() {    
     
