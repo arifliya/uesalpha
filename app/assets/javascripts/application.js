@@ -257,6 +257,12 @@ $('#addAllWhereaboutsDetails').click(function(e) {
         $('.close-button').click(function(event) {
        
         $(this).remove();
+
+         if ($(".tagsWhereabouts a").is(":visible")) {
+            $('#noLocationData').hide();
+        } else {
+        $('#noLocationData').show();
+        }
         
         event.preventDefault();
     });
@@ -297,6 +303,12 @@ $('#addAllImmigrationDetails').click(function(e) {
         $('.close-button').click(function(event) {
        
         $(this).remove();
+
+        if ($(".tagsImmigration a").is(":visible")) {
+            $('#noImmigrationData').hide();
+        } else {
+        $('#noImmigrationData').show();
+        }
         
         event.preventDefault();
     });
@@ -305,12 +317,12 @@ $('#addAllImmigrationDetails').click(function(e) {
 
 $('#removeAllIntelDetails').click(function(e) {
     $('.tagsIntel a').remove();
-    $('#noIntelData').hide();
+    $('#noIntelData').show();
     e.preventDefault();
 })
 
 $('#addAllIntelDetails').click(function(e) {
-    $('#noIntelData').show();
+    $('#noIntelData').hide();
     $('.tagsIntel').append('\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS">IMS<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP">SIP<span class="close-icon"></span> </a>\
@@ -330,6 +342,12 @@ $('#addAllIntelDetails').click(function(e) {
         $('.close-button').click(function(event) {
        
         $(this).remove();
+
+         if ($(".tagsIntel a").is(":visible")) {
+            $('#noIntelData').hide();
+        } else {
+        $('#noIntelData').show();
+        }
         
         event.preventDefault();
     });
@@ -357,6 +375,12 @@ $('#addAllTravelDetails').click(function(e) {
         $('.close-button').click(function(event) {
        
         $(this).remove();
+
+         if ($(".tagsTravel a").is(":visible")) {
+            $('#noTravelData').hide();
+        } else {
+        $('#noTravelData').show();
+        }
         
         event.preventDefault();
     });
@@ -438,11 +462,23 @@ $('#addWhereaboutsDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
+
+        if ($(".tagsWhereabouts a").is(":visible")) {
+    $('#noLocationData').hide();
+} else {
+$('#noLocationData').show();
+}
         
         event.preventDefault();
     });   
 
 });
+
+if ($(".tagsWhereabouts a").is(":visible")) {
+    $('#noLocationData').hide();
+} else {
+$('#noLocationData').show();
+}
 
 $('#addImmigrationDetails').click(function(e) {
     
@@ -471,12 +507,23 @@ $('#addImmigrationDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
+
+        if ($(".tagsImmigration a").is(":visible")) {
+    $('#noImmigrationData').hide();
+} else {
+$('#noImmigrationData').show();
+}
         
         event.preventDefault();
     });   
 
 });
 
+if ($(".tagsImmigration a").is(":visible")) {
+    $('#noImmigrationData').hide();
+} else {
+$('#noImmigrationData').show();
+}
 
 $('#addIntelDetails').click(function(e) {
     
@@ -505,11 +552,22 @@ $('#addIntelDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
+        if ($(".tagsIntel a").is(":visible")) {
+    $('#noIntelData').hide();
+} else {
+$('#noIntelData').show();
+}
         
         event.preventDefault();
     });   
 
 });
+
+if ($(".tagsIntel a").is(":visible")) {
+    $('#noIntelData').hide();
+} else {
+$('#noIntelData').show();
+}
 
 $('#addTravelDetails').click(function(e) {
     
@@ -538,11 +596,22 @@ $('#addTravelDetails').click(function(e) {
     $('.close-button').click(function(event) {
        
         $(this).remove();
+        if ($(".tagsTravel a").is(":visible")) {
+    $('#noTravelData').hide();
+} else {
+$('#noTravelData').show();
+}
 
         event.preventDefault();
     });   
 
 });
+
+if ($(".tagsTravel a").is(":visible")) {
+    $('#noTravelData').hide();
+} else {
+$('#noTravelData').show();
+}
 
 $('.close-button').click(function(event) {
        
