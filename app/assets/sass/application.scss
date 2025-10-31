@@ -14,15 +14,26 @@
 
 
 .condition {
-    border: 1px solid #b1b4b6;
-    background-color: #ffffff;
-    /* background-color: #ffffff; */
-    padding: 30px;
-    position: relative;
+
+    .select-subcategories {
+        border: 1px solid #b1b4b6;
+        background-color: #ffffff;
+        padding: 30px;
+        position: relative;
+        width: 48%;
+        margin-right: 2%;
+    }
+
+    .subcategories {
+        @extend .select-subcategories;
+        background-color: #F5F5F5;
+    }
 
     fieldset {
         border: 0;
     }
+
+    
 }
 
 .flex {
@@ -168,4 +179,48 @@
 
 #removeAllTravelDetails {
     @extend #removeAllDataSources
+}
+
+.autocomplete__dropdown-arrow-down-wrapper {
+    position: relative;
+    z-index: 1;
+    
+    .autocomplete__dropdown-arrow-down {
+        z-index: 0;
+    }
+}
+
+
+.saved-profile {
+
+    position: relative;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 20px 20px 15px 20px;
+
+    .govuk-summary-list {
+        margin-bottom: 0;
+    }
+
+    .govuk-summary-list__row {
+        border-bottom: none;
+    }
+
+    .profile-select-btns {
+
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: flex-end;
+    }
+
+    .edit-btn {
+        margin-top: -50px;
+    }
+
+    .select-btn {
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
+
 }

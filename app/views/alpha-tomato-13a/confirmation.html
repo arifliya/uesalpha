@@ -1,0 +1,27 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+
+<div class="hods-alert">
+  <h2 class="hods-alert__heading">New search request sent</h2>
+  <p>
+   File request for My first UES submission.xls is being processed.
+  </p>
+</div>
+
+<a href="homepage.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Return to homepage
+</a>
+
+{% endblock %}

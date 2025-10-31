@@ -677,7 +677,7 @@ $('#saveContinue').click(function() {
 })
 
 $('#saveContinue2').click(function() {
-    $('#formId2').attr('action', 'filter-download');
+    $('#formId2').attr('action', 'check-settings-all-users-submit');
 })
 
 $('#advancedOptions').click(function() {
@@ -694,7 +694,7 @@ $('#advancedOptions').click(function() {
 if (window.location.href.indexOf("#people") > -1) {
     // alert("found people");
     $('#breadCrumb-ID').text('People');
-    $('#formId').attr('action', 'what-do-you-want-displayed#people');
+    $('#formId').attr('action', 'saved-profiles#people');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#people');
     $('#formId3').attr('action', 'check-settings-all-users-submit#people');
     $('#typeOfSearch').text('People');
@@ -703,7 +703,7 @@ if (window.location.href.indexOf("#people") > -1) {
 if (window.location.href.indexOf("#contact") > -1) {
     // alert("found contact");
     $('#breadCrumb-ID').text('Contact numbers');
-    $('#formId').attr('action', 'what-do-you-want-displayed#contact');
+    $('#formId').attr('action', 'saved-profiles#contact');
     // $('#formId2').attr('action', 'check-settings-all-users-submit#contact');
     $('#formId3').attr('action', 'check-settings-all-users-submit#contact');
     $('#typeOfSearch').text('Contact numbers');
@@ -781,8 +781,60 @@ $(function() {
         $('#inProgressTag').removeClass('govuk-tag--blue');
         $('#inProgressTag').addClass('govuk-tag--green');
         $('#completedBanner').show();
-        $('#changeViewDetailsURL').attr('href', 'details-completed.html');
+        $('#changeViewDetailsURL').attr('href', '/public/images/UES_Sample_Output_V3_9.xlsx');
+        $('#changeViewDetailsURL').text('Download file');
     }, 10000);
 });
 
 
+$('.for-data').click(function(){
+    $( "#choose-data" ).trigger("click");
+    $( "#choose-data" ).focus();
+})
+
+$('.for-contact').click(function(){
+    $( "#contact-data" ).trigger("click");
+    $( "#contact-data" ).focus();
+})
+
+$('.for-location').click(function(){
+    $( "#whereabouts-data" ).trigger("click");
+    $( "#whereabouts-data" ).focus();
+})
+
+$('.for-immigration').click(function(){
+    $( "#immigration-data" ).trigger("click");
+    $( "#immigration-data" ).focus();
+})
+
+$('.for-intel').click(function(){
+    $( "#intel-data" ).trigger("click");
+    $( "#intel-data" ).focus();
+})
+
+$('.for-travel').click(function(){
+    $( "#travel-data" ).trigger("click");
+    $( "#travel-data" ).focus();
+})
+
+$( document ).ready(function() {
+   
+    $('li').click(function(){
+        alert('list clicked')
+    })
+    
+    $('#choose-data').on("input", function(){
+        
+        if ($('input #choose-data').val('')) {
+          $('#addDataSources').prop('disabled', true); 
+        }
+        
+        $('#addDataSources').prop('disabled', false); 
+    
+    })
+    
+});
+
+$('#addDataSources').click(function(){
+    $('#addDataSources').prop('disabled', true);
+})

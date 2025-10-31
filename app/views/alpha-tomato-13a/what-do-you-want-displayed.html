@@ -1,0 +1,117 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-2" class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Display in results
+    </li>
+  </ol>
+</nav>
+
+<h1>What do you want displayed in the results?</h1>
+<form  class="form" action="filter-download" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <!-- <a href="#" role="button" id="selectAllIntel" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Select all
+</a> -->
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="contact" name="displayed-in-results" type="checkbox" value="Contact details" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          Contact details
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="whereabouts" name="displayed-in-results" type="checkbox" value=" Location details" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="whereabouts">
+          Location details
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="immigration" name="displayed-in-results" type="checkbox" value=" Immigration history" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="immigration">
+          Immigration history      
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="intel" name="displayed-in-results" type="checkbox" value=" Intelligence reports">
+        <label class="govuk-label govuk-checkboxes__label" for="intel">
+          Intelligence reports
+        </label>
+      </div>
+       <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input intel-checkboxes" id="travel" name="displayed-in-results" type="checkbox" value=" Travel history">
+        <label class="govuk-label govuk-checkboxes__label" for="travel">
+          Travel history
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+<!-- <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Do you want to use any other data sources?
+    </legend>
+    <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources-2" name="advanced" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources-2">
+          Yes
+        </label>
+      </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="otherDataSources" name="advanced" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="otherDataSources">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div> -->
+
+<div class="govuk-button-group">
+  <button id="saveContinue2" role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+    Save and continue
+  </button>
+  <!-- <button id="advancedOptions" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+  Advanced options
+</button> -->
+</div>
+
+</form>
+
+<!-- <form class="form" action="advanced-options" method="post">
+<div class="govuk-button-group">
+  <button role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+  Advanced options
+</button>
+
+</form> -->
+
+{% endblock %}

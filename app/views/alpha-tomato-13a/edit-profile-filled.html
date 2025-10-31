@@ -1,0 +1,178 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+{% block content %}
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="saved-profiles.html">Saved profiles</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" >
+      Edit profile
+    </li>
+  </ol>
+</nav>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Edit profile: Immigration</h1>
+
+      <p>Check what you have selected to appear in your download, then submit your search request. You can save this selection as a profile to reuse with future requests.</p>
+
+      <dl class="govuk-summary-list">
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Choose your search
+          </dt>
+          <dd id="typeOfSearch" class="govuk-summary-list__value">
+            {{ data ['choose-data'] }}
+            Person
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="choose-your-search.html">Change<span class="govuk-visually-hidden">Person</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Unique name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['unique'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a id="breadCrumb-ID-2" class="govuk-link govuk-link--no-visited-state" href="upload-template.html">Change<span class="govuk-visually-hidden">upload template</span></a>
+          </dd>
+        </div> -->
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Select the categories to be displayed in your download
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Contact details, Location details, Immigration history, Intelligence reports, Travel history
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a id="breadCrumb-ID-3" class="govuk-link govuk-link--no-visited-state" href="what-do-you-want-displayed.html">Change<span class="govuk-visually-hidden"> What do you want displayed in your output?</span></a>
+          </dd>
+        </div>
+        
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Origin country, Last known travel details, Flight code, Destination country, Location code, Location description
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Contact</span></a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location history
+          </dt>
+          <dd class="govuk-summary-list__value">
+            All known addresses, Last known address, Last known address ICE region
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Location history</span></a>
+          </dd>
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Immigration report details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Case date, Case type, Outcome, Outcome date, Expiry date, Leave conditions, Work restrictions, Source, Case ID
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Immigration report details</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Intelligence report details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            IMS, SIP, NOD, SIP Report ID, SIP Report date, SIP Report title, SIP Report category, SIP Report detail, IMS Report ID, IMS Report date, IMS Report title, IMS Report category, IMS Report detail
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Intelligence report details</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Travel history details
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Origin country, Last known travel details, Flight code, Destination country, Location code, Location description  
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="filter-download.html">Change<span class="govuk-visually-hidden">Travel history</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Match confidence settings
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Strict matching
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="advanced-options.html">Change<span class="govuk-visually-hidden"> Highlight terms in text</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Data sources
+          </dt>
+          <dd class="govuk-summary-list__value">
+            BRP, CID, CRS, DNB, GBD, IABS, PCDP, WPD, GBD, WPD, CID
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="advanced-options.html">Change<span class="govuk-visually-hidden">Default data sources</span></a>
+          </dd>
+        </div>
+      </dl>
+<div class="govuk-button-group">
+      <a href="saved-profiles.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Delete profile
+</a>
+</div>
+    </div>
+  </div>
+
+  <div id="whatFiltersToShow" class="govuk-visually-hidden">{{ data['displayed-in-results'] }}</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+ 
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+<h1 class="govuk-heading-xl">Universal Enrichment Service (UES)
+  <span class="govuk-caption-l">Submit a large volume of data to search over multiple data sources simultaneously</span>
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <h2 class="govuk-heading-l">Submitting a new request</h2>
+  <p>Select the appropriate search type for your data. <br>
+Always use the UES template to submit data. <br>
+Choose a unique filename for your file.</p>
+
+<h2 class="govuk-heading-l">Results</h2>
+  <p>Contacts, location and immigration history are displayed in your results by default. You can 
+deselect any of these as required.
+Depending on which RBAC (role-based access control) you are assigned to, you may be able to 
+include intelligence reports and travel history in your results.</p>
+
+ 
+
+  <h2 class="govuk-heading-l">Advanced options</h2>
+  <p>You can want to choose more specific settings for your results.</p>
+
+  <h3 class="govuk-heading-m">Matching</h3>
+  <p>If desired, you can adjust the Recommended setting for match quality. <br>
+By selecting Strict you will receive fewer results, but those matches will be more exact. <br>
+By choosing Broad, you will get more results, but these will be less accurate matches.</p>
+
+  <h3 class="govuk-heading-m">Data sources</h3>
+  <p>The default list for data sources: BRP (Biometric Residence Permit), CID (Case Information 
+Database), DNB (Dun and Bradstreet), GBD (GB Data), IABS (Immigration and Analysis Biometric
+System), WPD (Worldpay Data) and PCDP (Person Centric Data Platform). PCDP includes data 
+from Atlas, Pega (EU Settlement Scheme data), CID and CRS (Central Reference System, which
+records visa information.)
+Additionally, there are legacy, intelligence and travel data sources.</p>
+<p>Again, depending on your RBAC, you may not have access to some specific intelligence of travel 
+datasets (such as SIP, the Single Intelligence Platform).</p>
+
+  <h2 class="govuk-heading-l">Progress with your request</h2>
+
+  <p>A banner will indicate the status of your request (processing or complete).
+You can download the completed request from a link in the banner or from the table in Your search
+history. The table shows the status of your current and recent requests.</p>
+
+  <h2 class="govuk-heading-l">Usage policy</h2>
+ <p>You must only use Universal Enrichment Service for genuine Home Office business.</p>
+
+  <h2 class="govuk-heading-l">Justifications</h2>
+ <p>You must give a justification for using Universal Enrichment Service each time you sign in. This 
+justification is recorded against any searches you do, until you exit Universal Enrichment Service.</p>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="dontShowAgain" name="dontShowAgain" type="checkbox" value="Dont show again">
+          <label class="govuk-label govuk-checkboxes__label" for="dontShowAgain">
+            Don't show this page again
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <a href="first-time-user.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    Start now
+    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+    </svg>
+  </a>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Upload template
+    </li>
+  </ol>
+</nav>
+
+<h1>New search request</h1>
+
+<div class="govuk-inset-text">
+  <a href="#">Download a template</a> and complete your data.
+</div>
+
+<form id="formId" class="form" action="saved-profiles" method="post">
+
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="unique">
+    Give your file a unique name
+  </label>
+  <input class="govuk-input govuk-!-width-one-third" id="unique" name="unique" type="text">
+</div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="file-upload-1">
+      Upload a file
+    </label>
+    <div
+      class="govuk-drop-zone"
+      data-module="govuk-file-upload">
+      <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+    </div>
+  </div>
+
+  
+
+  <button role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+  Save and continue
+</button>
+
+  <!-- <a id="newRequestContinue" href="what-do-you-want-displayed.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+    Continue
+  </a> -->
+</form>
+
+{% endblock %}

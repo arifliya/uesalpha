@@ -1,0 +1,165 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Saved profiles
+    </li>
+  </ol>
+</nav>
+
+<h1>Saved profiles</h1>
+
+
+<a class="govuk-button" href="what-do-you-want-displayed.html">Create a new profile</a>
+
+
+<div class="saved-profiles-group ">
+  
+<section class="saved-profile govuk-!-margin-bottom-9">
+  <h2 class="govuk-!-margin-top-0">Immigration</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Categories
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Contact details, Immigration report details, Immigration report details, Location history, Intelligence report details
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Match confidence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Data sources
+            </dt>
+            <dd class="govuk-summary-list__value">
+              BRP, CID, CRS, DNB, GBD, IABS, WPD, PCDP
+            </dd>
+            
+          </div>
+          
+        </dl>
+    </div>
+    <div class="govuk-grid-column-one-third profile-select-btns">
+      <a class="govuk-link edit-btn" href="edit-profile-filled.html">Edit profile</a>
+       <a class="govuk-button govuk-button--secondary select-btn" href="check-settings-all-users-saved.html">Select</a>
+    </div> 
+  </div>   
+</section>
+
+<section class="saved-profile govuk-!-margin-bottom-9">
+  <h2 class="govuk-!-margin-top-0">Sham marriages</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Categories
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Contact details, Immigration report details, Immigration report details, Location history, Intelligence report details
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Match confidence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Data sources
+            </dt>
+            <dd class="govuk-summary-list__value">
+              BRP, CID, CRS, DNB, GBD, IABS, WPD, PCDP
+            </dd>
+            
+          </div>
+          
+        </dl>
+    </div>
+    <div class="govuk-grid-column-one-third profile-select-btns">
+      <a class="govuk-link edit-btn" href="edit-profile-filled.html">Edit profile</a>
+       <a class="govuk-button govuk-button--secondary select-btn" href="check-settings-all-users-saved.html">Select</a>
+    </div> 
+  </div>   
+</section>
+
+<section class="saved-profile govuk-!-margin-bottom-9">
+  <h2 class="govuk-!-margin-top-0">Illegal imports</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Categories
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Contact details, Immigration report details, Immigration report details, Location history, Intelligence report details
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Match confidence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Data sources
+            </dt>
+            <dd class="govuk-summary-list__value">
+              BRP, CID, CRS, DNB, GBD, IABS, WPD, PCDP
+            </dd>
+            
+          </div>
+          
+        </dl>
+    </div>
+    <div class="govuk-grid-column-one-third profile-select-btns">
+      <a class="govuk-link edit-btn" href="edit-profile-filled.html">Edit profile</a>
+       <a class="govuk-button govuk-button--secondary select-btn" href="check-settings-all-users-saved.html">Select</a>
+    </div> 
+  </div>   
+</section>
+ 
+</div>
+
+{% endblock %}
