@@ -781,7 +781,7 @@ $(function() {
         $('#inProgressTag').removeClass('govuk-tag--blue');
         $('#inProgressTag').addClass('govuk-tag--green');
         $('#completedBanner').show();
-        $('#changeViewDetailsURL').attr('href', '/public/images/UES_Sample_Output_V3_9.xlsx');
+        $('#changeViewDetailsURL').attr('href', '/public/images/NewUESOutput.xlsx');
         $('#changeViewDetailsURL').text('Download file');
     }, 10000);
 });
@@ -819,9 +819,9 @@ $('.for-travel').click(function(){
 
 $( document ).ready(function() {
    
-    $('li').click(function(){
-        alert('list clicked')
-    })
+    // $('li').click(function(){
+    //     // alert('list clicked')
+    // })
     
     $('#choose-data').on("input", function(){
         
@@ -837,4 +837,29 @@ $( document ).ready(function() {
 
 $('#addDataSources').click(function(){
     $('#addDataSources').prop('disabled', true);
+})
+
+
+
+// if (window.location.href.indexOf("matching") > -1) {
+//     $(".app-subnav__section-item").addClass("app-subnav__section-item--current")
+// }
+
+$(function(){
+    var current = location.pathname.split("/")[2];
+    
+    $('.app-subnav__section li a').each(function(){
+
+       
+        
+        var $this = $(this);
+        
+
+        // if the current path is like this link, make it active
+        if(!$this.attr('href').indexOf(current)){
+            $this.parent().addClass('app-subnav__section-item--current');
+        }
+
+        
+    })
 })

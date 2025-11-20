@@ -1,0 +1,138 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Add your page content here -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="homepage.html" class="govuk-back-link">Back</a>
+    <h1>Details page
+      <!-- <span class="govuk-caption-l">Submit a large volume of data to search over multiple data sources simultaneously</span> -->
+    </h1>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          File name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['unique'] }}
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submitted time:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11:19 29 Apr 2025
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Completed time:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Time taken:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          File size
+        </dt>
+        <dd class="govuk-summary-list__value">
+          25Mb
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Rows
+        </dt>
+        <dd class="govuk-summary-list__value">
+          500
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Validation completed:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11:21 29 Apr 2025
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Match completed:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Enrichment completed
+        </dt>
+        <dd class="govuk-summary-list__value">
+          -
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Outputs used:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['displayed-in-results'] }}
+        </dd>
+      </div>
+
+      <!-- <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Match confidence:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Recommended
+        </dd>
+      </div> -->
+
+    </dl>
+  </div>
+</div>
+
+
+{% endblock %}

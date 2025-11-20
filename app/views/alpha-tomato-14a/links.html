@@ -1,0 +1,83 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script src="/public/javascripts/application-autocomplete.js"></script>
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/accessible-autocomplete.min.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-2" class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="what-do-you-want-displayed.html">Display in results</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Subcategories
+    </li>
+  </ol>
+</nav>
+
+<h1>Select the subcategories for display in your download  </h1>
+<br><br>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-third">
+
+  {% include "/left-nav-subcat.html" %}
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Links
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="pms" name="matching" type="checkbox" value="Potential Match Score">
+        <label class="govuk-label govuk-checkboxes__label" for="pms">
+          Atlas link
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="pms" name="matching" type="checkbox" value="Potential Match Score">
+        <label class="govuk-label govuk-checkboxes__label" for="pms">
+          HOPS link
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<button class="govuk-button">Save and next</button>
+
+<a class="govuk-button govuk-button--secondary" href="advanced-options.html">Advanced options</a>
+</div>
+</div>
+<div id="whatFiltersToShow" class="govuk-visually-hidden">{{ data['displayed-in-results'] }}</div>
+
+{% endblock %}

@@ -1,0 +1,390 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block homeOfficeKit_style %}
+
+{% endblock %}
+
+{% block header %}
+  {% include "/header-with-nav.html" %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script src="/public/javascripts/application-autocomplete.js"></script>
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/accessible-autocomplete.min.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<!-- Add your page content here -->
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID" class="govuk-breadcrumbs__link" href="choose-your-search.html">People</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a id="breadCrumb-ID-2" class="govuk-breadcrumbs__link" href="upload-template.html">Upload template</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="what-do-you-want-displayed.html">Display in results</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Filter results
+    </li>
+  </ol>
+</nav>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Filter the results for your download 
+      </h1>
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+      Select all options that are relevant to you
+    </div>
+<form class="form" action="" method="post">
+<div class="condition contact-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half select-subcategories">
+      <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Contact details: select subcategories
+                </label>
+              </h3>
+              <div class="flex">
+               
+                <select class="govuk-select govuk-!-width-full" name="contact-data" id="contact-data">
+                  <option value="" selected></option>          
+                  <option value="All known contact details">All known contact details</option>
+                  <option value="Last known phone">Last known phone</option>
+                  <option value="Last known email">Last known email</option>
+                  
+                 
+                </select>
+                <div class="autocomplete__dropdown-arrow-down-wrapper for-contact"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div>
+                
+                <button id="addContactDetails" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllContactDetails" href="#">Add all contact details</a>
+            </div>
+      </div>
+             <div class="govuk-grid-column-one-half subcategories">
+              <a class="govuk-link--no-visited-state" id="removeAllContactDetails" href="#">Remove all contact details</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Contact subcategories
+                </label>
+              </h3>
+              <br>
+           <span class="tagsContact">
+              <p id="noContactData">No data sources selected</p>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known contact details">All known contact details<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known phone">Last known phone<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known email">Last known email<span class="close-icon"></span> </a>
+          </span>
+            
+
+            </div>
+</div>
+</div>
+<br>
+</form>  
+
+<form class="form" action="" method="post">
+<div class="condition whereabouts-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third select-subcategories">
+      <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Location history: select subcategories
+                  <span class="govuk-caption-m">Location history: select subcategories</span>
+                </label>
+              </h3>
+              <div class="flex">
+               
+                <select class="govuk-select govuk-!-width-full" name="whereabouts-data" id="whereabouts-data">
+                  <option value="" selected></option>          
+                  <option value="All known  addresses">All known addresses</option>
+                  <option value="Last known address">Last known address</option>
+                   <option value="Last known address ICE">Last known address ICE region</option>
+                  </select>
+                   <div class="autocomplete__dropdown-arrow-down-wrapper for-location"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div>
+                
+                <button id="addWhereaboutsDetails" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllWhereaboutsDetails" href="#">Add all location history</a>
+            </div>
+             </div>
+             <div class="govuk-grid-column-two-thirds subcategories">
+              <a class="govuk-link--no-visited-state" id="removeAllWhereaboutsDetails" href="#">Remove all location history</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Location history subcategories
+                  
+                </label>
+              </h3>
+              <br>
+           <span class="tagsWhereabouts">
+              <p id="noLocationData">No data sources selected</p>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="All known addresses">All known addresses<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address">Last known address<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known address ICE">Last known address ICE region<span class="close-icon"></span> </a>
+          </span>
+            
+            </div>
+  </div>
+</div>
+<br>
+</form>
+
+<form class="form" action="" method="post">
+<div class="condition immigration-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third select-subcategories">
+      <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Immigration reports: select subcategories
+                </label>
+              </h3>
+              <div class="flex">
+               
+                <select class="govuk-select govuk-!-width-full" name="immigration-data" id="immigration-data">
+                  <option value="" selected></option>          
+                  <option value="Case date">Case date</option>
+                  <option value="Case type">Case type</option>
+                  <option value="Outcome">Outcome</option>
+                  <option value="Outcome date">Outcome date</option>
+                  <option value="Expiry date">Expiry date</option>
+                  <option value="Leave conditions">Leave conditions</option>
+                  <option value="Work restrictions">Work restrictions</option>
+                  <option value="Source">Source</option>
+                  <option value="Case ID">Case ID</option>
+                  <option value="Last know immigration details">Last know immigration details</option>
+                  <option value="Last known leave expiry date">Last known leave expiry date</option>
+                  <option value="Last known immigration harm rating">Last known immigration harm rating</option>
+                  <option value="Immigration detention">Immigration detention</option>
+                  <option value="Removal details">Removal details</option>
+                  <option value="Special conditions">Special conditions</option>
+                  <option value="Reporting status">Reporting status</option>
+                  <option value="DO history">DO history</option>
+                  <option value="DO breach flag">DO breach flag</option>  
+                  <option value="Removability">Removability</option>            
+                </select>
+                <div class="autocomplete__dropdown-arrow-down-wrapper for-immigration"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div>
+                
+                <button id="addImmigrationDetails" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllImmigrationDetails" href="#">Add all immigration report details</a>
+            </div>
+             </div>
+             <div class="govuk-grid-column-two-thirds subcategories">
+              <a class="govuk-link--no-visited-state" id="removeAllImmigrationDetails" href="#">Remove all immigration report details</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Immigration reports subcategories
+                </label>
+              </h3>
+              <br>
+           <span class="tagsImmigration"> 
+            <p id="noImmigrationData">No data sources selected</p>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case date">Case date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case type">Case type<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome">Outcome<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Outcome date">Outcome date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Expiry date">Expiry date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Leave conditions">Leave conditions<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Work restrictions">Work restrictions<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Source">Source<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Case ID">Case ID<span class="close-icon"></span> </a>
+            <!-- <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last know immigration details">Last know immigration details<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known leave expiry date">Last known leave expiry date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known immigration harm rating">Last known immigration harm rating<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Immigration detention">Immigration detention<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removal details">Removal details<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Special conditions">Special conditions<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Reporting status">Reporting status<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO history">DO history<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="DO breach flag">DO breach flag<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Removability">Removability<span class="close-icon"></span> </a> -->
+          </span>
+            
+            </div>
+  </div>
+</div>
+<br>
+</form>
+
+<form class="form" action="" method="post">
+<div class="condition intel-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third select-subcategories">
+      <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Intelligence reports: select subcategories
+                  <span class="govuk-caption-m">Search intelligence report details</span>
+                </label>
+              </h3>
+              <div class="flex">
+                
+                <select class="govuk-select govuk-!-width-full" name="intel-data" id="intel-data">
+                  <option value="" selected></option>          
+                  <option value="IMS">IMS</option>
+                  <option value="SIP">SIP</option>
+                  <option value="NOD">NOD</option>
+                  <option value="SIP Report ID">SIP Report ID</option>
+                  <option value="SIP Report date">SIP Report date</option>
+                  <option value="SIP Report title">SIP Report title</option>
+                  <option value="SIP Report category">SIP Report category</option>
+                  <option value="SIP Report detail">SIP Report detail</option>
+                  <option value="IMS Report ID">IMS Report ID</option>
+                  <option value="IMS Report date">IMS Report date</option>
+                  <option value="IMS Report type">IMS Report type</option>
+                  <option value="IMS Report category">IMS Report category</option>
+                  <option value="IMS Report detail">IMS Report detail</option>
+                 
+                </select>
+                <div class="autocomplete__dropdown-arrow-down-wrapper for-intel"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div>
+                
+                <button id="addIntelDetails" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllIntelDetails" href="#">Add all intelligence report details</a>
+            </div>
+             </div>
+             <div class="govuk-grid-column-two-thirds subcategories">
+              <a class="govuk-link--no-visited-state" id="removeAllIntelDetails" href="#">Remove all intelligence report details</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Intelligence reports subcategories
+                  
+                </label>
+              </h3>
+              <br>
+           <span class="tagsIntel">
+              <p id="noIntelData">No data sources selected</p>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS">IMS<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP">SIP<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="NOD">NOD<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report ID">SIP Report ID<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report date">SIP Report date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report title">SIP Report title<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report category">SIP Report category<span class="close-icon"></span> </a>
+            <!-- <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP Report detail">SIP Report detail<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report ID">IMS Report ID<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report date">IMS Report date<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report title">IMS Report title<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report category">IMS Report category<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS Report detail">IMS Report detail<span class="close-icon"></span> </a> -->
+          </span>
+            
+            </div>
+</div>
+</div>
+<br>
+</form>
+
+<form class="form" action="" method="post">
+<div class="condition travel-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third select-subcategories">
+      <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Travel details: select subcategories
+                  <span class="govuk-caption-m">Search and add travel details</span>
+                </label>
+              </h3>
+              <div class="flex">
+                
+                <select class="govuk-select govuk-!-width-full" name="travel-data" id="travel-data">
+                  <option value="" selected></option>          
+                  <option value="Origin date">Origin date</option>
+                  <option value="Origin port">Origin port</option>
+                  <option value="Origin country">Origin country</option>
+                  <option value="Destination port">Destination port</option>
+                  <option value="Destination country">Destination country</option>
+                  <option value="Destination date">Destination date</option>
+                  <option value="Flight code">Flight code</option>
+                  <option value="Travel type codes">Travel type codes</option>
+                  <option value="Checked in">Checked in</option>
+                  <option value="Departure">Departure</option>
+                  <option value="Last known travel details">Last known travel details</option>
+                  <option value="Document swipe direction">Document swipe direction</option>
+                  <option value="Document swipe time">Document swipe time</option>
+                  <option value="Location code">Location code</option>
+                  <option value="Location description">Location description</option>
+                 
+                </select>
+                <div class="autocomplete__dropdown-arrow-down-wrapper for-travel"><svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"></path></svg></div>
+                
+                <button id="addTravelDetails" data-module="govuk-button" class="govuk-button govuk-button--secondary">Add</button>
+              </div>
+              <a class="govuk-link--no-visited-state" id="addAllTravelDetails" href="#">Add all travel sources</a>
+            </div>
+             </div>
+             <div class="govuk-grid-column-two-thirds subcategories">
+              <a class="govuk-link--no-visited-state" id="removeAllTravelDetails" href="#">Remove all travel sources</a>
+              <h3 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+                  Travel details subcategories
+                  
+                </label>
+              </h3>
+              <br>
+           <span class="tagsTravel">
+              <p id="noTravelData">No data sources selected</p>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Origin country">Origin country<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Last known travel details">Last known travel details<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Flight code">Flight code<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Destination country">Destination country<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Location code">Location code<span class="close-icon"></span> </a>
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="Location description">Location description<span class="close-icon"></span> </a>
+          </span>
+            
+            </div>
+</div>
+</div>
+<br>
+</form>
+
+<form id="formId2" action="check-settings-all-users-submit">
+
+  <input class="govuk-visually-hidden" id="contactDataHidden" name="contactDataHidden" type="text" value="Origin country, Last known travel details, Flight code, Destination country, Location code, Location description">
+  <input class="govuk-visually-hidden" id="whereaboutsDataHidden" name="whereaboutsDataHidden" type="text" value="Origin country, Last known travel details, Flight code, Destination country, Location code, Location description">
+  <input class="govuk-visually-hidden" id="immigrationDataHidden" name="immigrationDataHidden" type="text" value="Origin country, Last known travel details, Flight code, Destination country, Location code, Location description">
+  <input class="govuk-visually-hidden" id="intelDataHidden" name="intelDataHidden" type="text" value="IMS, SIP, NOD, SIP Report ID, SIP Report date, SIP Report title, SIP Report category, SIP Report detail, IMS Report ID, IMS Report date, IMS Report title, IMS Report category, IMS Report detail,">
+  <input class="govuk-visually-hidden" id="travelDataHidden" name="travelDataHidden" type="text" value="Origin country, Last known travel details, Flight code, Destination country, Location code, Location description">
+
+
+  <!-- <button class="govuk-button" data-module="govuk-button">Save and continue</button> -->
+   <div class="govuk-button-group">
+  <button id="saveContinue2" role="button" draggable="false" class="govuk-button" data-module="govuk-button" >
+    Save and continue
+  </button>
+  <button id="advancedOptions" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+  Advanced options
+</button>
+</div>
+</form>
+
+</fieldset>
+</div>
+    
+  </div>
+</div>
+
+<div id="whatFiltersToShow" class="govuk-visually-hidden">{{ data['displayed-in-results'] }}</div>
+
+{% endblock %}
