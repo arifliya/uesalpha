@@ -863,3 +863,62 @@ $(function(){
         
     })
 })
+
+
+// $(function(){
+
+//     var whatToShow = $('#whatFiltersToShow').text().split(",")
+
+
+//     var navMenuVariables = $('.app-subnav__section li a').text()
+
+
+
+//     // alert(navMenuVariables)
+// // if ($('#whatFiltersToShow:contains("Person details")').length > 0) {
+// //      $('.person-details').show()   
+// // }   
+
+// })
+
+
+$(document).ready(function () {
+
+    
+
+    // 1. Get the comma-separated list and normalise it
+    let filters = $("#whatFiltersToShow")
+        .text()
+        .split(",")
+        .map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ""));
+
+    // 2. Loop through nav items
+    $(".app-subnav__section-item a").each(function () {
+        let linkText = $(this).text().trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+
+        // 3. If the link text matches one of the filters → show + highlight
+        if (filters.includes(linkText)) {
+            $(this).addClass("filter-match");
+            $(this).closest(".app-subnav__section-item").show();
+        } else {
+            // 4. Hide anything not in the list
+            $(this).closest(".app-subnav__section-item").hide();
+            $('.matching').parent().show()
+        }
+    });
+
+});
+
+$(document).ready(function () {
+    $(".govuk-checkboxes__input").on("change", function () {
+
+
+        let msg = $("#savingMessage");
+
+        msg.stop(true, true)      // stop previous animations
+           .fadeIn(150)           // show quickly
+           .delay(1500)           // keep visible
+           .fadeOut(300);         // disappear smoothly
+    });
+});
+

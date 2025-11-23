@@ -50,7 +50,10 @@
 </div>
 
 <div class="govuk-grid-column-one-third">
-  <form  class="form" action="explore-links" method="post">
+  <form  class="form" action="" method="post">
+    <div id="savingMessage" class="govuk-body" style="display:none;">
+    Saving…
+</div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -94,9 +97,9 @@
   </fieldset>
   
 </div>
-<button class="govuk-button">Save and next</button>
+<!-- <button class="govuk-button">Save and next</button> -->
   </form>
-  <a class="govuk-button govuk-button--secondary" href="advanced-options.html">Advanced options</a>
+  <!-- <a class="govuk-button govuk-button--secondary" href="advanced-options.html">Advanced options</a> -->
 </div>
 </div>
 <div id="whatFiltersToShow" class="govuk-visually-hidden">{{ data['displayed-in-results'] }}</div>
