@@ -817,27 +817,27 @@ $('.for-travel').click(function(){
     $( "#travel-data" ).focus();
 })
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
    
-    // $('li').click(function(){
-    //     // alert('list clicked')
-    // })
+//     // $('li').click(function(){
+//     //     // alert('list clicked')
+//     // })
     
-    $('#choose-data').on("input", function(){
+//     $('#choose-data').on("input", function(){
         
-        if ($('input #choose-data').val('')) {
-          $('#addDataSources').prop('disabled', true); 
-        }
+//         if ($('input #choose-data').val('')) {
+//           $('#addDataSources').prop('disabled', true); 
+//         }
         
-        $('#addDataSources').prop('disabled', false); 
+//         $('#addDataSources').prop('disabled', false); 
     
-    })
+//     })
     
-});
+// });
 
-$('#addDataSources').click(function(){
-    $('#addDataSources').prop('disabled', true);
-})
+// $('#addDataSources').click(function(){
+//     $('#addDataSources').prop('disabled', true);
+// })
 
 
 
