@@ -198,6 +198,16 @@ $('#addAllDataSources').click(function(e) {
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IABS">IABS<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="PCDP">PCDP<span class="close-icon"></span> </a>\
             <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="WPD">WPD<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="ILRD">ILRD<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="OCGM">OCGM<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="S24">S24<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="SIP">SIP<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMS">IMS<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="IMSR">IMSR<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="BITD">BITD<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="APR">APR<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="NEW1">NEW1<span class="close-icon"></span> </a>\
+            <a href="#" style="color:white" class="close-button" name="dataTypeNew" id="NEW2">NEW2<span class="close-icon"></span> </a>\
         ')
 
         $('.close-button').click(function(event) {
@@ -921,4 +931,3 @@ $(document).ready(function () {
            .fadeOut(300);         // disappear smoothly
     });
 });
-
